@@ -8,7 +8,9 @@ body
   display: flex
   flex-direction: column
   height: 100%
+  color: #fff
   font-family: 'Lato', sans-serif
+  background-color: #eee
 
 .page-wrapper
   flex: 1 0 auto
@@ -23,13 +25,19 @@ body
 .app-container
   width: 375px
   height: 100%
+  // padding: 0 10px
+  position: relative
   min-height: 100vh
-  background-color: #fff
+  background: #2584ea
+  background: -moz-linear-gradient(45deg, #2584ea 0%, #0f9af0 100%)
+  background: -webkit-linear-gradient(45deg, #2584ea 0%,#0f9af0 100%)
+  background: linear-gradient(45deg, #2584ea 0%,#0f9af0 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2584ea', endColorstr='#0f9af0',GradientType=1 )
   display: inline-block
   outline: 1px solid red
 
 .currency-header
-  outline: 1px solid blue
+  // outline: 1px solid blue
   display: block
   padding: 10px 5px
   letter-spacing: -.36em
@@ -41,7 +49,7 @@ body
   width: 360px
 
 .currency-header__item
-  outline: 1px solid green
+  // outline: 1px solid green
   display: inline-block
   position: relative
   width: 33%
@@ -58,20 +66,20 @@ body
 
 .currency-header__item-prev
   position: absolute
-  left: 20%
-  left: 10px
+  left: 30%
+  // left: 10px
   top: 50%
   display: block
-  transform: translateY(-50%)
-  font-size: 8px
+  transform: translateY(-30%)
+  font-size: 9px
   letter-spacing: 0.5px
 
 .currency-header__item-next
   position: absolute
-  right: 20%
-  right: 10px
+  right: 30%
+  // right: 10px
   top: 50%
-  transform: translateY(-50%)
+  transform: translateY(-30%)
   display: block
   font-size: 9px
   letter-spacing: 0.5px
@@ -80,3 +88,161 @@ body
   font-weight: bold
   font-size: 16px
   letter-spacing: 0.5px
+
+.main-container
+  // outline: 2px solid red
+  border-top: 1px solid #fff
+  margin: 0 auto
+  padding: 10px
+  height: 290px
+
+.demoId
+  position: relative
+  ul
+    display: block
+    padding: 0
+    position: relative
+    margin: 0
+
+.like-h2
+  font-size: 30px
+  font-weight: bold
+  margin: 60px auto 100px auto
+  text-align: center
+
+
+.prev
+  left: 20px
+  background: url("../img/double-left-chevron.svg") no-repeat
+
+.next
+  right: 20px
+  background: url("../img/double-angle-pointing-to-right.svg") no-repeat
+
+.prev, .next
+  position: absolute
+  display: block
+  width: 50px
+  height: 50px
+  border: none
+  z-index: 10
+  padding: 0
+  top: 30%
+  background-size: 30%
+  background-position: center center
+  &:hover
+    cursor: pointer
+
+ul li
+  display: inline-block
+
+ul .dragend-page
+  padding: 10px !important
+
+.ui-loader
+  display: none
+
+.main-container__buttons
+  text-align: center
+  margin: 0px auto
+
+.main-container__button
+  display: inline-block
+  color: #fff
+  position: relative
+  border: none
+  font-size: 12px
+  background-color: transparent
+  width: 80px
+  &:hover
+    cursor: pointer
+  &:first-child
+    margin-right: 40px
+  &::after
+    position: absolute
+    border-radius: 50%
+    display: block
+    height: 40px
+    width: 40px
+    top: -45px
+    left: 50%
+    transform: translateX(-50%)
+    content: ''
+
+.main-container__topUp::after
+  background: #0D83DE url("../img/plus.svg") no-repeat
+  background-position: center center
+  background-size: 60%
+
+.main-container__exchange::after
+  background: #0D83DE url("../img/exchange.svg") no-repeat
+  background-position: center center
+  background-size: 60%
+
+.transac-history
+  outline: 1px solid green
+  margin: 0 auto
+  position: relative
+  padding: 0 10px
+  background: #fff
+  color: #000
+
+.transac-history__title
+  display: inline-block
+  width: calc(100% + 20px)
+  margin: 0 -10px 5px -10px
+  padding: 10px 100px 10px 10px
+  background-color: #eee
+
+.transac-history__all
+  position: absolute
+  right: 10px
+  top: 10px
+  &:hover
+    cursor: pointer
+
+.transac-history__image
+  display: inline-block
+  float: left
+  margin-right: 10px
+  width: 40px
+  height: 40px
+  border: 2px solid #ddd
+  border-radius: 50%
+  &.spent
+    background: url("../img/money.svg") no-repeat
+    background-position: center center
+    background-size: 70%
+  &.exchange
+    background: url("../img/exchange-mon.svg") no-repeat
+    background-position: center center
+    background-size: 60%
+  &.sent
+    background: url()
+
+.transac-history__element
+  // outline: 1px solid #ccc
+  position: relative
+  min-height: 50px
+  padding: 5px 0
+  text-align: left
+
+.transac-history__category
+  display: inline-block
+  font-weight: bold
+
+.transac-history__value
+  position: absolute
+  right: 10px
+  top: 15px
+
+.transac-history__time
+  font-size: 12px
+  line-height: 2
+
+.app-footer
+  position: absolute
+  bottom: 0
+  left: 0
+  height: 200px
+  width: 100%

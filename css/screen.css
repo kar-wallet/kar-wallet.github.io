@@ -13,10 +13,12 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  color: #fff;
   font-family: "Lato", sans-serif;
+  background-color: #eee;
 }
 
-/* line 13, ../sass/screen.sass */
+/* line 15, ../sass/screen.sass */
 .page-wrapper {
   flex: 1 0 auto;
   display: flex;
@@ -24,25 +26,29 @@ body {
   align-items: center;
 }
 
-/* line 19, ../sass/screen.sass */
+/* line 21, ../sass/screen.sass */
 .page-footer {
   flex: 0 0 auto;
   background-color: #FFF;
 }
 
-/* line 23, ../sass/screen.sass */
+/* line 25, ../sass/screen.sass */
 .app-container {
   width: 375px;
   height: 100%;
+  position: relative;
   min-height: 100vh;
-  background-color: #fff;
+  background: #2584ea;
+  background: -moz-linear-gradient(45deg, #2584ea 0%, #0f9af0 100%);
+  background: -webkit-linear-gradient(45deg, #2584ea 0%, #0f9af0 100%);
+  background: linear-gradient(45deg, #2584ea 0%, #0f9af0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2584ea', endColorstr='#0f9af0',GradientType=1 );
   display: inline-block;
   outline: 1px solid red;
 }
 
-/* line 31, ../sass/screen.sass */
+/* line 39, ../sass/screen.sass */
 .currency-header {
-  outline: 1px solid blue;
   display: block;
   padding: 10px 5px;
   letter-spacing: -0.36em;
@@ -54,9 +60,8 @@ body {
   width: 360px;
 }
 
-/* line 43, ../sass/screen.sass */
+/* line 51, ../sass/screen.sass */
 .currency-header__item {
-  outline: 1px solid green;
   display: inline-block;
   position: relative;
   width: 33%;
@@ -69,38 +74,253 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 56, ../sass/screen.sass */
+/* line 64, ../sass/screen.sass */
 .currency-header__item:hover {
   cursor: pointer;
 }
 
-/* line 59, ../sass/screen.sass */
+/* line 67, ../sass/screen.sass */
 .currency-header__item-prev {
   position: absolute;
-  left: 20%;
-  left: 10px;
+  left: 30%;
   top: 50%;
   display: block;
-  transform: translateY(-50%);
-  font-size: 8px;
+  transform: translateY(-30%);
+  font-size: 9px;
   letter-spacing: 0.5px;
 }
 
-/* line 69, ../sass/screen.sass */
+/* line 77, ../sass/screen.sass */
 .currency-header__item-next {
   position: absolute;
-  right: 20%;
-  right: 10px;
+  right: 30%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
   display: block;
   font-size: 9px;
   letter-spacing: 0.5px;
 }
 
-/* line 79, ../sass/screen.sass */
+/* line 87, ../sass/screen.sass */
 .currency-header__item-current {
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 0.5px;
+}
+
+/* line 92, ../sass/screen.sass */
+.main-container {
+  border-top: 1px solid #fff;
+  margin: 0 auto;
+  padding: 10px;
+  height: 290px;
+}
+
+/* line 99, ../sass/screen.sass */
+.demoId {
+  position: relative;
+}
+/* line 101, ../sass/screen.sass */
+.demoId ul {
+  display: block;
+  padding: 0;
+  position: relative;
+  margin: 0;
+}
+
+/* line 107, ../sass/screen.sass */
+.like-h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 60px auto 100px auto;
+  text-align: center;
+}
+
+/* line 114, ../sass/screen.sass */
+.prev {
+  left: 20px;
+  background: url("../img/double-left-chevron.svg") no-repeat;
+}
+
+/* line 118, ../sass/screen.sass */
+.next {
+  right: 20px;
+  background: url("../img/double-angle-pointing-to-right.svg") no-repeat;
+}
+
+/* line 122, ../sass/screen.sass */
+.prev, .next {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: none;
+  z-index: 10;
+  padding: 0;
+  top: 30%;
+  background-size: 30%;
+  background-position: center center;
+}
+/* line 133, ../sass/screen.sass */
+.prev:hover, .next:hover {
+  cursor: pointer;
+}
+
+/* line 136, ../sass/screen.sass */
+ul li {
+  display: inline-block;
+}
+
+/* line 139, ../sass/screen.sass */
+ul .dragend-page {
+  padding: 10px !important;
+}
+
+/* line 142, ../sass/screen.sass */
+.ui-loader {
+  display: none;
+}
+
+/* line 145, ../sass/screen.sass */
+.main-container__buttons {
+  text-align: center;
+  margin: 0px auto;
+}
+
+/* line 149, ../sass/screen.sass */
+.main-container__button {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  border: none;
+  font-size: 12px;
+  background-color: transparent;
+  width: 80px;
+}
+/* line 157, ../sass/screen.sass */
+.main-container__button:hover {
+  cursor: pointer;
+}
+/* line 159, ../sass/screen.sass */
+.main-container__button:first-child {
+  margin-right: 40px;
+}
+/* line 161, ../sass/screen.sass */
+.main-container__button::after {
+  position: absolute;
+  border-radius: 50%;
+  display: block;
+  height: 40px;
+  width: 40px;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+}
+
+/* line 172, ../sass/screen.sass */
+.main-container__topUp::after {
+  background: #0D83DE url("../img/plus.svg") no-repeat;
+  background-position: center center;
+  background-size: 60%;
+}
+
+/* line 177, ../sass/screen.sass */
+.main-container__exchange::after {
+  background: #0D83DE url("../img/exchange.svg") no-repeat;
+  background-position: center center;
+  background-size: 60%;
+}
+
+/* line 182, ../sass/screen.sass */
+.transac-history {
+  outline: 1px solid green;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 10px;
+  background: #fff;
+  color: #000;
+}
+
+/* line 190, ../sass/screen.sass */
+.transac-history__title {
+  display: inline-block;
+  width: calc(100% + 20px);
+  margin: 0 -10px 5px -10px;
+  padding: 10px 100px 10px 10px;
+  background-color: #eee;
+}
+
+/* line 197, ../sass/screen.sass */
+.transac-history__all {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/* line 201, ../sass/screen.sass */
+.transac-history__all:hover {
+  cursor: pointer;
+}
+
+/* line 204, ../sass/screen.sass */
+.transac-history__image {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+}
+/* line 212, ../sass/screen.sass */
+.transac-history__image.spent {
+  background: url("../img/money.svg") no-repeat;
+  background-position: center center;
+  background-size: 70%;
+}
+/* line 216, ../sass/screen.sass */
+.transac-history__image.exchange {
+  background: url("../img/exchange-mon.svg") no-repeat;
+  background-position: center center;
+  background-size: 60%;
+}
+/* line 220, ../sass/screen.sass */
+.transac-history__image.sent {
+  background: url();
+}
+
+/* line 223, ../sass/screen.sass */
+.transac-history__element {
+  position: relative;
+  min-height: 50px;
+  padding: 5px 0;
+  text-align: left;
+}
+
+/* line 230, ../sass/screen.sass */
+.transac-history__category {
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* line 234, ../sass/screen.sass */
+.transac-history__value {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+/* line 239, ../sass/screen.sass */
+.transac-history__time {
+  font-size: 12px;
+  line-height: 2;
+}
+
+/* line 243, ../sass/screen.sass */
+.app-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 200px;
+  width: 100%;
 }

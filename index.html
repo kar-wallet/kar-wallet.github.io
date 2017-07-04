@@ -13,8 +13,10 @@
   <!-- <header class="page-header">Lorem ipsum dolor sit amet</header> -->
   <div class="page-wrapper">
     <div class="app-container">
-      <div class="currency-header" id="demo">
-        <div class="currency-header__item dragend-page"><span class="currency-header__item-prev"></span><div class="currency-header__item-current">cUSD</div><span class="currency-header__item-next">cEUR</span></div>
+      <div class="currency-header demoId" id="demo">
+        <div class="currency-header__item dragend-page">
+          <span class="currency-header__item-prev"></span><div class="currency-header__item-current">cUSD</div><span class="currency-header__item-next">cEUR</span>
+        </div>
         <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cUSD</span><div class="currency-header__item-current">cEUR</div><span class="currency-header__item-next">cRUB</span></div>
         <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cEUR</span><div class="currency-header__item-current">cRUB</div><span class="currency-header__item-next">cZL</span></div>
         <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cRUB</span><div class="currency-header__item-current">cZL</div><span class="currency-header__item-next">cSHK</span></div>
@@ -22,7 +24,84 @@
         <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cSHK</span><div class="currency-header__item-current">cBRUB</div><span class="currency-header__item-next">cGR</span></div>
         <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cBRUB</span><div class="currency-header__item-current">cGR</div><span class="currency-header__item-next"></span></div>
       </div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, iste.
+      <button type="button" name="button" class="prev"></button>
+      <button type="button" name="button" class="next"></button>
+      <div class="main-container demoId">
+        <!-- <button type="button" name="button" class="prev">Prev</button>
+        <button type="button" name="button" class="next">Prev</button> -->
+        <ul>
+          <li class="main-container__slide dragend-page">
+            <div class="cont">
+              <div>Total val : 700 <span>USD</span></div>
+              <div class="like-h2">500 <span>USD</span></div>
+            </div>
+            <div class="main-container__buttons">
+              <button type="button" name="button" class="main-container__button main-container__topUp">add</button>
+              <button type="button" name="button" class="main-container__button main-container__exchange">exchange</button>
+            </div>
+
+          </li>
+
+          <li class="main-container__slide dragend-page ">
+            <div class="cont">
+              <div>Total val : 70 000 <span>USD</span></div>
+              <div class="like-h2">1 600 <span>USD</span></div>
+            </div>
+            <div class="main-container__buttons">
+              <button type="button" name="button" class="main-container__button main-container__topUp">add</button>
+              <button type="button" name="button" class="main-container__button main-container__exchange">exchange</button>
+            </div>
+            <!-- <div class="transac-history">
+              <div>asdsdasd </div>
+              <div>asdsdasd </div>
+              <div>asdsdasd </div>
+            </div> -->
+          </li>
+
+          <li class="main-container__slide dragend-page">
+            <div class="cont">
+              <div>Total val : 70 <span>USD</span></div>
+              <div class="like-h2">11 500 <span>USD</span></div>
+            </div>
+            <div class="main-container__buttons">
+              <button type="button" name="button" class="main-container__button main-container__topUp">add</button>
+              <button type="button" name="button" class="main-container__button main-container__exchange">exchange</button>
+            </div>
+            <!-- <div class="transac-history">
+              <div>asdsdasd </div>
+              <div>asdsdasd </div>
+              <div>asdsdasd </div>
+            </div> -->
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="app-footer">
+        <div class="transac-history">
+          <div class="transac-history__title">Transaction History</div>
+          <div class="transac-history__all">View All</div>
+          <div class="transac-history__element">
+            <div class="transac-history__image spent"></div>
+            <div class="transac-history__category">Spent</div>
+            <div class="transac-history__time">Today 11:20</div>
+            <div class="transac-history__value">$5.05</div>
+          </div>
+          <div class="transac-history__element">
+            <div class="transac-history__image exchange"></div>
+            <div class="transac-history__category">Exchange</div>
+            <div class="transac-history__time">Today 11:20</div>
+            <div class="transac-history__value">$5.05</div>
+          </div>
+          <div class="transac-history__element">
+            <div class="transac-history__image"></div>
+            <div class="transac-history__category">Spent</div>
+            <div class="transac-history__time">Today 11:20</div>
+            <div class="transac-history__value">$5.05</div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -32,10 +111,10 @@
   </footer> -->
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  <!-- <script src="js/dragend.js"></script> -->
-  <!-- <script type="text/javascript">
-    $("#demo").dragend();
-  </script> -->
+  <script src="js/dragend.js"></script>
+  <script type="text/javascript">
+    $(".demoId").dragend();
+  </script>
   <script src="js/scripts.js"></script>
 </body>
 </html>

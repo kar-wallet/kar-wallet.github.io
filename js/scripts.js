@@ -61,10 +61,6 @@ $(function() {
 
     $(event.target).addClass("active");
 
-  })
-
-
-
-
+  });
 
 });

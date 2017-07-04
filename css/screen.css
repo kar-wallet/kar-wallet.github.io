@@ -1,0 +1,106 @@
+/* line 1, ../sass/screen.sass */
+html {
+  height: 100%;
+}
+
+/* line 4, ../sass/screen.sass */
+body * {
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/screen.sass */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+/* line 13, ../sass/screen.sass */
+.page-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 19, ../sass/screen.sass */
+.page-footer {
+  flex: 0 0 auto;
+  background-color: #FFF;
+}
+
+/* line 23, ../sass/screen.sass */
+.app-container {
+  width: 375px;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  display: inline-block;
+  outline: 1px solid red;
+}
+
+/* line 31, ../sass/screen.sass */
+.currency-header {
+  outline: 1px solid blue;
+  display: block;
+  padding: 10px 5px;
+  letter-spacing: -0.36em;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 120px;
+  margin: 0 auto;
+  width: 360px;
+}
+
+/* line 43, ../sass/screen.sass */
+.currency-header__item {
+  outline: 1px solid green;
+  display: inline-block;
+  position: relative;
+  width: 33%;
+  width: 120px;
+  padding: 10px !important;
+  text-align: center;
+  letter-spacing: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 56, ../sass/screen.sass */
+.currency-header__item:hover {
+  cursor: pointer;
+}
+
+/* line 59, ../sass/screen.sass */
+.currency-header__item-prev {
+  position: absolute;
+  left: 20%;
+  left: 10px;
+  top: 50%;
+  display: block;
+  transform: translateY(-50%);
+  font-size: 8px;
+  letter-spacing: 0.5px;
+}
+
+/* line 69, ../sass/screen.sass */
+.currency-header__item-next {
+  position: absolute;
+  right: 20%;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+
+/* line 79, ../sass/screen.sass */
+.currency-header__item-current {
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}

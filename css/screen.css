@@ -51,7 +51,6 @@ body {
 .currency-header {
   display: block;
   padding: 10px 5px;
-  letter-spacing: -0.36em;
   white-space: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;

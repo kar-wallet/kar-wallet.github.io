@@ -19,6 +19,13 @@ $(function() {
   // $("p").on("swiperight",function(){
   //   alert("You swiped right!");
   // });
+  $(".next").click(function(){
+    $(".owl-next").click();
+  });
+
+  $(".prev").click(function(){
+    $(".owl-prev").click();
+  });
 
   $(".main-container__exchange").click(function(){
     $(".main-screen").hide();

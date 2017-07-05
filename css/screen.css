@@ -541,16 +541,26 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* line 424, ../sass/screen.sass */
+.owl-prev {
+  display: none;
+}
+
+/* line 427, ../sass/screen.sass */
+.owl-next {
+  display: none;
+}
+
+/* line 430, ../sass/screen.sass */
 .owl-item.active.center {
   opacity: 1;
 }
 
-/* line 430, ../sass/screen.sass */
+/* line 436, ../sass/screen.sass */
 .header-currency {
   position: relative;
   height: 40px;
 }
-/* line 435, ../sass/screen.sass */
+/* line 441, ../sass/screen.sass */
 .header-currency::after {
   position: absolute;
   bottom: 2px;
@@ -563,7 +573,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: block;
   content: "";
 }
-/* line 448, ../sass/screen.sass */
+/* line 454, ../sass/screen.sass */
 .header-currency .item div {
   font-weight: bold;
   line-height: 40px;

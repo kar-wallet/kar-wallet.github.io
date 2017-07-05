@@ -401,6 +401,7 @@ ul .dragend-page {
   -moz-appearance: none;
   -webkit-appearance: none;
   text-align-last: center !important;
+  padding-left: calc(50% - 1em);
 }
 /* line 318, ../sass/screen.sass */
 .exchange-header select option {

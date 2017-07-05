@@ -390,6 +390,7 @@ ul .dragend-page {
 /* line 304, ../sass/screen.sass */
 .exchange-header select {
   display: block;
+  border-radius: 0 !important;
   border: none;
   width: 100%;
   color: #000;
@@ -399,19 +400,19 @@ ul .dragend-page {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  text-align-last: center;
+  text-align-last: center !important;
 }
-/* line 321, ../sass/screen.sass */
+/* line 318, ../sass/screen.sass */
 .exchange-header select option {
   text-align: center;
   border-radius: 5px !important;
 }
-/* line 324, ../sass/screen.sass */
+/* line 321, ../sass/screen.sass */
 .exchange-header select:hover, .exchange-header select:active, .exchange-header select:focus {
   outline: none !important;
 }
 
-/* line 327, ../sass/screen.sass */
+/* line 324, ../sass/screen.sass */
 .exchange-header__from, .exchange-header__to {
   display: inline-block;
   height: 100%;
@@ -419,7 +420,7 @@ ul .dragend-page {
   letter-spacing: normal;
 }
 
-/* line 333, ../sass/screen.sass */
+/* line 330, ../sass/screen.sass */
 .exchange-header__rate {
   letter-spacing: normal;
   display: block;
@@ -430,12 +431,12 @@ ul .dragend-page {
   text-align: center;
 }
 
-/* line 343, ../sass/screen.sass */
+/* line 340, ../sass/screen.sass */
 .exchange-header__to {
   float: right;
 }
 
-/* line 346, ../sass/screen.sass */
+/* line 343, ../sass/screen.sass */
 .exchange-header__change {
   position: absolute;
   top: 0;
@@ -450,17 +451,17 @@ ul .dragend-page {
   box-shadow: inset 0 0 6px 0px #eee;
   display: block;
 }
-/* line 359, ../sass/screen.sass */
+/* line 356, ../sass/screen.sass */
 .exchange-header__change:hover {
   cursor: pointer;
 }
 
-/* line 363, ../sass/screen.sass */
+/* line 360, ../sass/screen.sass */
 select:hover {
   cursor: pointer;
 }
 
-/* line 366, ../sass/screen.sass */
+/* line 363, ../sass/screen.sass */
 .special-inpNumber-cont {
   width: 80%;
   display: block;
@@ -469,7 +470,7 @@ select:hover {
   position: relative;
 }
 
-/* line 373, ../sass/screen.sass */
+/* line 370, ../sass/screen.sass */
 .special-inpNumber-cont__currency {
   position: absolute;
   max-width: 60px;
@@ -481,7 +482,7 @@ select:hover {
   font-size: 16px;
 }
 
-/* line 383, ../sass/screen.sass */
+/* line 380, ../sass/screen.sass */
 .exchange-content__value {
   display: block;
   width: 100%;
@@ -491,13 +492,13 @@ select:hover {
   text-align: right;
 }
 
-/* line 392, ../sass/screen.sass */
+/* line 389, ../sass/screen.sass */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
 }
 
-/* line 396, ../sass/screen.sass */
+/* line 393, ../sass/screen.sass */
 .exchange-content__qr-code {
   display: block;
   width: 200px;
@@ -506,14 +507,14 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 3px;
   margin: 50px auto 40px auto;
 }
-/* line 403, ../sass/screen.sass */
+/* line 400, ../sass/screen.sass */
 .exchange-content__qr-code img {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-/* line 408, ../sass/screen.sass */
+/* line 405, ../sass/screen.sass */
 .exchange-content__reset {
   display: block;
   width: 80%;
@@ -527,7 +528,7 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
-/* line 420, ../sass/screen.sass */
+/* line 417, ../sass/screen.sass */
 .exchange-content__reset:hover {
   cursor: pointer;
 }

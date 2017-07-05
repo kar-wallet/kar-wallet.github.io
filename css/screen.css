@@ -395,6 +395,7 @@ ul .dragend-page {
   color: #000;
   font-weight: bold;
   padding: 12px 5px 10px 5px;
+  background-color: #fff;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -517,7 +518,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: block;
   width: 80%;
   max-width: 200px;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   color: #fff;
   z-index: 5;

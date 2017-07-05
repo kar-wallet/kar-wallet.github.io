@@ -3,13 +3,14 @@
   .app-container {
     width: 100%;
   }
-
-  /* line 4, ../sass/media.sass */
+}
+@media screen and (max-width: 321px) {
+  /* line 11, ../sass/media.sass */
   .currency-header__item {
     padding-left: 0 !important;
   }
 
-  /* line 7, ../sass/media.sass */
+  /* line 14, ../sass/media.sass */
   .currency-header {
     margin-left: -15px !important;
   }

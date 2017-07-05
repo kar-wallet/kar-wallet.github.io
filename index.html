@@ -34,7 +34,7 @@
       </div> -->
 
       <div class="header-currency">
-        <div class="owl1 owl-carousel">
+        <div class="nonloop owl1 owl-carousel">
           <div class="item">
             <div>cUSD</div>
           </div>
@@ -228,24 +228,17 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
   <script>
-    $('.owl1').owlCarousel({
-      // center: true,
+    $('.nonloop').owlCarousel({
+      center: true,
       items: 3,
       loop: false,
-      margin: 20
-      // nav: true,
-      // responsive:{
-      //     // 380:{
-      //     //     items:5
-      //     // },
-      //     // 600:{
-      //     //     items:5
-      //     // }
-      // }
+      margin: 50,
+      responsive:{
+          600:{
+              items:5
+          }
+      }
     });
-    // owl1.on('change.owl.carousel', function(event) {
-    //   owl2.trigger('to.owl.carousel', [event.item.index,300,true]);
-    // })
   </script>
   <script src="js/scripts.js"></script>
 </body>

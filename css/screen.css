@@ -542,7 +542,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* line 423, ../sass/screen.sass */
 .owl-item.active.center {
-  z-index: 10 !important;
   opacity: 1;
 }
 

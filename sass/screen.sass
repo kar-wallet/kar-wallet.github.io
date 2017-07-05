@@ -10,7 +10,12 @@ body
   height: 100%
   color: #fff
   font-family: 'Lato', sans-serif
-  background-color: #eee
+  // background-color: #eee
+  background: #2584ea
+  background: -moz-linear-gradient(45deg, #2584ea 0%, #0f9af0 100%)
+  background: -webkit-linear-gradient(45deg, #2584ea 0%,#0f9af0 100%)
+  background: linear-gradient(45deg, #2584ea 0%,#0f9af0 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2584ea', endColorstr='#0f9af0',GradientType=1 )
   &>div
     height: 100%
 
@@ -36,13 +41,14 @@ button
   // padding: 0 10px
   position: relative
   // min-height: 100vh
+  box-shadow: 0px 0px 7px 1px #555
   background: #2584ea
   background: -moz-linear-gradient(45deg, #2584ea 0%, #0f9af0 100%)
   background: -webkit-linear-gradient(45deg, #2584ea 0%,#0f9af0 100%)
   background: linear-gradient(45deg, #2584ea 0%,#0f9af0 100%)
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2584ea', endColorstr='#0f9af0',GradientType=1 )
   display: inline-block
-  outline: 1px solid red
+  // outline: 1px solid red
 
 .currency-header
   // outline: 1px solid blue
@@ -101,8 +107,12 @@ button
   // outline: 2px solid red
   border-top: 1px solid #fff
   margin: 0 auto
+  height: 100%
   padding: 10px
-  height: 290px
+  // height: 290px
+  ul
+    height: 100%
+    position: relative
 
 .demoId
   position: relative
@@ -117,6 +127,8 @@ button
   font-weight: bold
   margin: 60px auto 100px auto
   text-align: center
+  span
+    font-size: 22px
 
 
 .prev
@@ -159,6 +171,7 @@ ul .dragend-page
   color: #fff
   position: relative
   border: none
+  line-height: 1.5
   font-size: 12px
   background-color: transparent
   width: 80px
@@ -188,7 +201,8 @@ ul .dragend-page
   background-size: 60%
 
 .transac-history
-  outline: 1px solid green
+  // outline: 1px solid green
+  border-top: 1px solid #fff
   margin: 0 auto
   position: relative
   padding: 0 10px
@@ -213,9 +227,9 @@ ul .dragend-page
   display: inline-block
   float: left
   margin-right: 10px
-  width: 40px
-  height: 40px
-  border: 2px solid #ddd
+  width: 35px
+  height: 35px
+  border: 2px solid #0D83DE
   border-radius: 50%
   &.spent
     background: url("../img/money.svg") no-repeat
@@ -225,8 +239,10 @@ ul .dragend-page
     background: url("../img/exchange-mon.svg") no-repeat
     background-position: center center
     background-size: 60%
-  &.sent
-    background: url()
+  &.topUp
+    background: url("../img/moneyAdd.svg") no-repeat
+    background-position: center center
+    background-size: 70%
 
 .transac-history__element
   // outline: 1px solid #ccc

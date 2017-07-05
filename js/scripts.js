@@ -20,6 +20,18 @@ $(function() {
   //   alert("You swiped right!");
   // });
 
+  $(".main-container__exchange").click(function(){
+    $(".main-screen").hide();
+    $(".exchange-screen").show();
+    $(".app-footer").hide();
+  });
+
+  $(".exchange-content__reset").click(function(){
+    $(".exchange-screen").hide();
+    $(".app-footer").show();
+    $(".main-screen").show();
+  });
+
   $(".demoId").dragend({
     afterInitialize: function() {
       this.container.style.visibility = "visible";

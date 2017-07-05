@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/screen.css">
+  <link rel="stylesheet" href="css/media.css">
   <title>Document</title>
 </head>
 <body>
   <!-- <header class="page-header">Lorem ipsum dolor sit amet</header> -->
   <div class="page-wrapper">
     <div class="app-container">
-      <div class="currency-header demoId" id="demo">
+      <div class="currency-header main-screen demoId" id="demo">
         <div class="currency-header__item dragend-page">
           <span class="currency-header__item-prev"></span><div class="currency-header__item-current">cUSD</div><span class="currency-header__item-next">cEUR</span>
         </div>
@@ -24,15 +25,16 @@
         <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cSHK</span><div class="currency-header__item-current">cBRUB</div><span class="currency-header__item-next">cGR</span></div>
         <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cBRUB</span><div class="currency-header__item-current">cGR</div><span class="currency-header__item-next"></span></div>
       </div>
-      <button type="button" name="button" class="prev"></button>
-      <button type="button" name="button" class="next"></button>
-      <div class="main-container demoId">
+      <button type="button" name="button" class="prev main-screen"></button>
+      <button type="button" name="button" class="next main-screen"></button>
+      <div class="main-container main-screen demoId">
         <!-- <button type="button" name="button" class="prev">Prev</button>
         <button type="button" name="button" class="next">Prev</button> -->
         <ul>
           <li class="main-container__slide dragend-page">
-            <div class="cont">
-              <div>Total val : 700 <span>USD</span></div>
+            <div class="main-container__slide-block">
+              <div class="qr-block"></div>
+              <div>Total value : <span>&#36; </span>700</div>
               <div class="like-h2"><span>$</span>500</div>
             </div>
             <div class="main-container__buttons">
@@ -42,8 +44,9 @@
           </li>
 
           <li class="main-container__slide dragend-page ">
-            <div class="cont">
-              <div>Total val : 70 000 <span>EUR</span></div>
+            <div class="main-container__slide-block">
+              <div>Total value : <span>&euro; </span>70 000</div>
+              <div class="qr-block"></div>
               <div class="like-h2"><span>&euro;</span>1 600</div>
             </div>
             <div class="main-container__buttons">
@@ -53,8 +56,9 @@
           </li>
 
           <li class="main-container__slide dragend-page">
-            <div class="cont">
-              <div>Total val : 70 <span>RUB</span></div>
+            <div class="main-container__slide-block">
+              <div class="qr-block"></div>
+              <div>Total value: <span>RUB </span>70</div>
               <div class="like-h2"><span>RUB </span>11 500</div>
             </div>
             <div class="main-container__buttons">
@@ -64,7 +68,8 @@
           </li>
 
           <li class="main-container__slide dragend-page">
-            <div class="cont">
+            <div class="main-container__slide-block">
+              <div class="qr-block"></div>
               <div>Total val : 70 <span>USD</span></div>
               <div class="like-h2">11 500 <span>USD</span></div>
             </div>
@@ -75,7 +80,8 @@
           </li>
 
           <li class="main-container__slide dragend-page">
-            <div class="cont">
+            <div class="main-container__slide-block">
+              <div class="qr-block"></div>
               <div>Total val : 70 <span>USD</span></div>
               <div class="like-h2">11 500 <span>USD</span></div>
             </div>
@@ -86,7 +92,8 @@
           </li>
 
           <li class="main-container__slide dragend-page">
-            <div class="cont">
+            <div class="main-container__slide-block">
+              <div class="qr-block"></div>
               <div>Total val : 70 <span>USD</span></div>
               <div class="like-h2">11 500 <span>USD</span></div>
             </div>
@@ -97,7 +104,8 @@
           </li>
 
           <li class="main-container__slide dragend-page">
-            <div class="cont">
+            <div class="main-container__slide-block">
+              <div class="qr-block"></div>
               <div>Total val : 70 <span>USD</span></div>
               <div class="like-h2">11 500 <span>USD</span></div>
             </div>
@@ -110,8 +118,46 @@
 
       </div>
 
+      <div class="exchange-screen">
+        <div class="exchange-header">
+          <div class="exchange-header__from">
+            <select>
+              <option value="cUsd">cUsd</option>
+              <option value="cEUR">cEUR</option>
+              <option value="cRUB">cRUB</option>
+              <option value="cZl">cZl</option>
+            </select>
+          </div>
+          <div class="exchange-header__change"></div>
+          <div class="exchange-header__to">
+            <select>
+              <option value="cEUR">cEUR</option>
+              <option value="cUsd">cUsd</option>
+              <option value="cRUB">cRUB</option>
+              <option value="cZl">cZl</option>
+            </select>
+          </div>
+          <div class="exchange-header__rate">1<span>cUSD </span>= 0.98<span>cEUR</span></div>
+        </div>
+        <div class="exchange-content">
+          <form action="">
+            <div class="special-inpNumber-cont">
+              <input type="number" name="quantity" min="1" max="50000" placeholder="Enter your value" value="10" class="exchange-content__value">
+              <div class="special-inpNumber-cont__currency">cUSD</div>
+            </div>
+
+            <div class="exchange-content__qr-code">
+              <img src="img/qr.jpg" alt="">
+            </div>
+
+            <!-- <button type="reset" value="Reset" class="exchange-content__reset">Cancel</button> -->
+            <div class="exchange-content__reset">Cancel</div>
+          </form>
+        </div>
+      </div>
+
       <div class="app-footer">
-        <div class="transac-history">
+        <div class="transac-history main-screen">
           <div class="transac-history__title">Transaction History</div>
           <div class="transac-history__all">View All</div>
           <div class="transac-history__element">
@@ -126,6 +172,7 @@
             <div class="transac-history__time">Today 11:20</div>
             <div class="transac-history__value"><span>$</span>5.05</div>
           </div>
+          <div class="history-data">11 may</div>
           <div class="transac-history__element">
             <div class="transac-history__image topUp"></div>
             <div class="transac-history__category">Top Up</div>

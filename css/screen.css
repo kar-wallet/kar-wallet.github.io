@@ -22,22 +22,23 @@ body {
 .page-wrapper {
   flex: 1 0 auto;
   display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
 
-/* line 21, ../sass/screen.sass */
+/* line 22, ../sass/screen.sass */
 .page-footer {
   flex: 0 0 auto;
   background-color: #FFF;
 }
 
-/* line 26, ../sass/screen.sass */
+/* line 27, ../sass/screen.sass */
 button:hover, button:active, button:focus {
   outline: none !important;
 }
 
-/* line 29, ../sass/screen.sass */
+/* line 30, ../sass/screen.sass */
 .app-container {
   width: 375px;
   height: 100%;
@@ -53,7 +54,7 @@ button:hover, button:active, button:focus {
   outline: 1px solid red;
 }
 
-/* line 44, ../sass/screen.sass */
+/* line 45, ../sass/screen.sass */
 .currency-header {
   display: block;
   padding: 10px 5px;
@@ -65,7 +66,7 @@ button:hover, button:active, button:focus {
   width: 360px;
 }
 
-/* line 56, ../sass/screen.sass */
+/* line 57, ../sass/screen.sass */
 .currency-header__item {
   display: inline-block;
   position: relative;
@@ -79,12 +80,12 @@ button:hover, button:active, button:focus {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 69, ../sass/screen.sass */
+/* line 70, ../sass/screen.sass */
 .currency-header__item:hover {
   cursor: pointer;
 }
 
-/* line 72, ../sass/screen.sass */
+/* line 73, ../sass/screen.sass */
 .currency-header__item-prev {
   position: absolute;
   left: 30%;
@@ -95,7 +96,7 @@ button:hover, button:active, button:focus {
   letter-spacing: 0.5px;
 }
 
-/* line 82, ../sass/screen.sass */
+/* line 83, ../sass/screen.sass */
 .currency-header__item-next {
   position: absolute;
   right: 30%;
@@ -106,14 +107,14 @@ button:hover, button:active, button:focus {
   letter-spacing: 0.5px;
 }
 
-/* line 92, ../sass/screen.sass */
+/* line 93, ../sass/screen.sass */
 .currency-header__item-current {
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 0.5px;
 }
 
-/* line 97, ../sass/screen.sass */
+/* line 98, ../sass/screen.sass */
 .main-container {
   border-top: 1px solid #fff;
   margin: 0 auto;
@@ -121,11 +122,11 @@ button:hover, button:active, button:focus {
   height: 290px;
 }
 
-/* line 104, ../sass/screen.sass */
+/* line 105, ../sass/screen.sass */
 .demoId {
   position: relative;
 }
-/* line 106, ../sass/screen.sass */
+/* line 107, ../sass/screen.sass */
 .demoId ul {
   display: block;
   padding: 0;
@@ -133,7 +134,7 @@ button:hover, button:active, button:focus {
   margin: 0;
 }
 
-/* line 112, ../sass/screen.sass */
+/* line 113, ../sass/screen.sass */
 .like-h2 {
   font-size: 30px;
   font-weight: bold;
@@ -141,19 +142,19 @@ button:hover, button:active, button:focus {
   text-align: center;
 }
 
-/* line 119, ../sass/screen.sass */
+/* line 120, ../sass/screen.sass */
 .prev {
   left: 20px;
   background: url("../img/double-left-chevron.svg") no-repeat;
 }
 
-/* line 123, ../sass/screen.sass */
+/* line 124, ../sass/screen.sass */
 .next {
   right: 20px;
   background: url("../img/double-angle-pointing-to-right.svg") no-repeat;
 }
 
-/* line 127, ../sass/screen.sass */
+/* line 128, ../sass/screen.sass */
 .prev, .next {
   position: absolute;
   display: block;
@@ -166,33 +167,33 @@ button:hover, button:active, button:focus {
   background-size: 30%;
   background-position: center center;
 }
-/* line 138, ../sass/screen.sass */
+/* line 139, ../sass/screen.sass */
 .prev:hover, .next:hover {
   cursor: pointer;
 }
 
-/* line 141, ../sass/screen.sass */
+/* line 142, ../sass/screen.sass */
 ul li {
   display: inline-block;
 }
 
-/* line 144, ../sass/screen.sass */
+/* line 145, ../sass/screen.sass */
 ul .dragend-page {
   padding: 10px !important;
 }
 
-/* line 147, ../sass/screen.sass */
+/* line 148, ../sass/screen.sass */
 .ui-loader {
   display: none;
 }
 
-/* line 150, ../sass/screen.sass */
+/* line 151, ../sass/screen.sass */
 .main-container__buttons {
   text-align: center;
   margin: 0px auto;
 }
 
-/* line 154, ../sass/screen.sass */
+/* line 155, ../sass/screen.sass */
 .main-container__button {
   display: inline-block;
   color: #fff;
@@ -202,15 +203,15 @@ ul .dragend-page {
   background-color: transparent;
   width: 80px;
 }
-/* line 162, ../sass/screen.sass */
+/* line 163, ../sass/screen.sass */
 .main-container__button:hover {
   cursor: pointer;
 }
-/* line 164, ../sass/screen.sass */
+/* line 165, ../sass/screen.sass */
 .main-container__button:first-child {
   margin-right: 40px;
 }
-/* line 166, ../sass/screen.sass */
+/* line 167, ../sass/screen.sass */
 .main-container__button::after {
   position: absolute;
   border-radius: 50%;
@@ -223,21 +224,21 @@ ul .dragend-page {
   content: "";
 }
 
-/* line 177, ../sass/screen.sass */
+/* line 178, ../sass/screen.sass */
 .main-container__topUp::after {
   background: #0D83DE url("../img/plus.svg") no-repeat;
   background-position: center center;
   background-size: 60%;
 }
 
-/* line 182, ../sass/screen.sass */
+/* line 183, ../sass/screen.sass */
 .main-container__exchange::after {
   background: #0D83DE url("../img/exchange.svg") no-repeat;
   background-position: center center;
   background-size: 60%;
 }
 
-/* line 187, ../sass/screen.sass */
+/* line 188, ../sass/screen.sass */
 .transac-history {
   outline: 1px solid green;
   margin: 0 auto;
@@ -247,7 +248,7 @@ ul .dragend-page {
   color: #000;
 }
 
-/* line 195, ../sass/screen.sass */
+/* line 196, ../sass/screen.sass */
 .transac-history__title {
   display: inline-block;
   width: calc(100% + 20px);
@@ -256,18 +257,18 @@ ul .dragend-page {
   background-color: #eee;
 }
 
-/* line 202, ../sass/screen.sass */
+/* line 203, ../sass/screen.sass */
 .transac-history__all {
   position: absolute;
   right: 10px;
   top: 10px;
 }
-/* line 206, ../sass/screen.sass */
+/* line 207, ../sass/screen.sass */
 .transac-history__all:hover {
   cursor: pointer;
 }
 
-/* line 209, ../sass/screen.sass */
+/* line 210, ../sass/screen.sass */
 .transac-history__image {
   display: inline-block;
   float: left;
@@ -277,24 +278,24 @@ ul .dragend-page {
   border: 2px solid #ddd;
   border-radius: 50%;
 }
-/* line 217, ../sass/screen.sass */
+/* line 218, ../sass/screen.sass */
 .transac-history__image.spent {
   background: url("../img/money.svg") no-repeat;
   background-position: center center;
   background-size: 70%;
 }
-/* line 221, ../sass/screen.sass */
+/* line 222, ../sass/screen.sass */
 .transac-history__image.exchange {
   background: url("../img/exchange-mon.svg") no-repeat;
   background-position: center center;
   background-size: 60%;
 }
-/* line 225, ../sass/screen.sass */
+/* line 226, ../sass/screen.sass */
 .transac-history__image.sent {
   background: url();
 }
 
-/* line 228, ../sass/screen.sass */
+/* line 229, ../sass/screen.sass */
 .transac-history__element {
   position: relative;
   min-height: 50px;
@@ -302,26 +303,26 @@ ul .dragend-page {
   text-align: left;
 }
 
-/* line 235, ../sass/screen.sass */
+/* line 236, ../sass/screen.sass */
 .transac-history__category {
   display: inline-block;
   font-weight: bold;
 }
 
-/* line 239, ../sass/screen.sass */
+/* line 240, ../sass/screen.sass */
 .transac-history__value {
   position: absolute;
   right: 10px;
   top: 15px;
 }
 
-/* line 244, ../sass/screen.sass */
+/* line 245, ../sass/screen.sass */
 .transac-history__time {
   font-size: 12px;
   line-height: 2;
 }
 
-/* line 248, ../sass/screen.sass */
+/* line 249, ../sass/screen.sass */
 .app-footer {
   position: absolute;
   bottom: 0;

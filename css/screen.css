@@ -537,7 +537,7 @@ input[type=number]::-webkit-outer-spin-button {
 /* line 419, ../sass/screen.sass */
 .owl-item {
   opacity: 0.2;
-  outline: 1px solid;
+  outline: 1px solid #fff !important;
 }
 
 /* line 424, ../sass/screen.sass */

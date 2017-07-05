@@ -536,20 +536,21 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* line 419, ../sass/screen.sass */
 .owl-item {
-  opacity: 0.5;
+  opacity: 0.2;
+  outline: 1px solid;
 }
 
-/* line 423, ../sass/screen.sass */
+/* line 424, ../sass/screen.sass */
 .owl-item.active.center {
   opacity: 1;
 }
 
-/* line 429, ../sass/screen.sass */
+/* line 430, ../sass/screen.sass */
 .header-currency {
   position: relative;
   height: 40px;
 }
-/* line 434, ../sass/screen.sass */
+/* line 435, ../sass/screen.sass */
 .header-currency::after {
   position: absolute;
   bottom: 2px;
@@ -562,7 +563,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: block;
   content: "";
 }
-/* line 447, ../sass/screen.sass */
+/* line 448, ../sass/screen.sass */
 .header-currency .item div {
   font-weight: bold;
   line-height: 40px;

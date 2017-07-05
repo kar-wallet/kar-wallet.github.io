@@ -6,15 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css">
   <link rel="stylesheet" href="css/screen.css">
   <link rel="stylesheet" href="css/media.css">
   <title>Document</title>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-  <!-- <header class="page-header">Lorem ipsum dolor sit amet</header> -->
+
   <div class="page-wrapper">
     <div class="app-container">
-      <div class="currency-header main-screen demoId" id="demo">
+      <!-- <div class="currency-header main-screen demoId" id="demo">
         <div class="currency-header__item dragend-page">
           <span class="currency-header__item-prev"></span><div class="currency-header__item-current">cUSD</div><span class="currency-header__item-next">cEUR</span>
         </div>
@@ -24,7 +31,31 @@
         <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cZL</span><div class="currency-header__item-current">cSHK</div><span class="currency-header__item-next">cBRUB</span></div>
         <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cSHK</span><div class="currency-header__item-current">cBRUB</div><span class="currency-header__item-next">cGR</span></div>
         <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cBRUB</span><div class="currency-header__item-current">cGR</div><span class="currency-header__item-next"></span></div>
+      </div> -->
+
+      <div class="header-currency">
+        <div class="owl1 owl-carousel">
+          <div class="item">
+            <div>cUSD</div>
+          </div>
+          <div class="item">
+            <div>cEUR</div>
+          </div>
+          <div class="item">
+            <div>cRUB</div>
+          </div>
+          <div class="item">
+            <div>cZL</div>
+          </div>
+          <div class="item">
+            <div>cSHK</div>
+          </div>
+          <div class="item">
+            <div>cBRUB</div>
+          </div>
+        </div>
       </div>
+
       <button type="button" name="button" class="prev main-screen"></button>
       <button type="button" name="button" class="next main-screen"></button>
       <div class="main-container main-screen demoId">
@@ -194,6 +225,27 @@
   <script src="js/dragend.js"></script>
   <script type="text/javascript">
     $(".demoId").dragend();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+  <script>
+    $('.owl1').owlCarousel({
+      center: true,
+      items: 3,
+      loop: false,
+      margin: 5,
+      // nav: true,
+      responsive:{
+          380:{
+              items:5
+          },
+          600:{
+              items:5
+          }
+      }
+    });
+    // owl1.on('change.owl.carousel', function(event) {
+    //   owl2.trigger('to.owl.carousel', [event.item.index,300,true]);
+    // })
   </script>
   <script src="js/scripts.js"></script>
 </body>

@@ -40,7 +40,7 @@ button
 .app-container
   width: 375px
   height: 100%
-  padding-bottom: 200px
+  padding-bottom: 275px
   // padding: 0 10px
   position: relative
   // min-height: 100vh
@@ -108,7 +108,7 @@ button
 
 .main-container
   margin: 0 auto
-  height: 100%
+  height: calc(100% - 40px)
   padding: 10px
   ul
     height: 100%
@@ -125,7 +125,8 @@ button
 .like-h2
   font-size: 30px
   font-weight: bold
-  margin: 60px auto 100px auto
+  margin: 50% auto 100px auto
+  margin-top: calc(50% - 5px)
   text-align: center
   span
     font-size: 22px
@@ -181,14 +182,17 @@ ul .dragend-page
 .main-container__buttons
   text-align: center
   margin: 0px auto
+  z-index: 100
 
 .main-container__button
   display: inline-block
   color: #fff
   position: relative
+  height: 60px
   border: none
   line-height: 1.5
   font-size: 12px
+  padding-top: 40px
   background-color: transparent
   width: 80px
   &:hover
@@ -201,7 +205,7 @@ ul .dragend-page
     display: block
     height: 40px
     width: 40px
-    top: -45px
+    top: 0px
     left: 50%
     transform: translateX(-50%)
     content: ''
@@ -324,6 +328,7 @@ ul .dragend-page
   display: inline-block
   height: 100%
   width: 50%
+  width: 49.6%
   letter-spacing: normal
 
 .exchange-header__rate
@@ -345,9 +350,10 @@ ul .dragend-page
   left: 50%
   width: 40px
   height: 40px
+  height: 43px
   z-index: 2
   margin-left: -20px
-  background: url("../img/exchange-black.svg") no-repeat
+  background: #fff url("../img/exchange-black.svg") no-repeat
   background-position: center center
   background-size: 60%
   box-shadow: inset 0 0 6px 0px #eee

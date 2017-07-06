@@ -21,113 +21,34 @@
 
   <div class="page-wrapper">
     <div class="app-container">
-      <!-- <div class="currency-header main-screen demoId" id="demo">
-        <div class="currency-header__item dragend-page">
-          <span class="currency-header__item-prev"></span><div class="currency-header__item-current">cUSD</div><span class="currency-header__item-next">cEUR</span>
-        </div>
-        <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cUSD</span><div class="currency-header__item-current">cEUR</div><span class="currency-header__item-next">cRUB</span></div>
-        <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cEUR</span><div class="currency-header__item-current">cRUB</div><span class="currency-header__item-next">cZL</span></div>
-        <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cRUB</span><div class="currency-header__item-current">cZL</div><span class="currency-header__item-next">cSHK</span></div>
-        <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cZL</span><div class="currency-header__item-current">cSHK</div><span class="currency-header__item-next">cBRUB</span></div>
-        <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cSHK</span><div class="currency-header__item-current">cBRUB</div><span class="currency-header__item-next">cGR</span></div>
-        <div class="currency-header__item dragend-page"><span class="currency-header__item-prev">cBRUB</span><div class="currency-header__item-current">cGR</div><span class="currency-header__item-next"></span></div>
-      </div> -->
-
       <div class="header-currency main-screen">
-        <div class="nonloop owl1 owl-carousel"><div class="item"><div>cUSD</div></div><div class="item"><div>cEUR</div></div><div class="item"><div>cRUB</div></div><div class="item"><div>cZL</div></div><div class="item"><div>cSHK</div></div><div class="item"><div>cRUB</div></div></div>
+        <div id="slider" class="nonloop owl1 owl-carousel"><div class="item"><div>cUSD</div></div><div class="item"><div>cEUR</div></div><div class="item"><div>cRUB</div></div><div class="item"><div>cBRUB</div></div></div>
       </div>
 
       <button type="button" name="button" class="prev main-screen"></button>
       <button type="button" name="button" class="next main-screen"></button>
+
       <div class="main-container main-screen demoId">
-        <!-- <button type="button" name="button" class="prev">Prev</button>
-        <button type="button" name="button" class="next">Prev</button> -->
         <ul>
-          <li class="main-container__slide dragend-page">
-            <div class="main-container__slide-block">
-              <div class="qr-block"></div>
-              <div>Total value : <span>&#36; </span>700</div>
-              <div class="like-h2"><span>$</span>500</div>
-            </div>
-            <div class="main-container__buttons">
-              <button type="button" name="button" class="main-container__button main-container__topUp">add</button>
-              <button type="button" name="button" class="main-container__button main-container__exchange">exchange</button>
-            </div>
+          <li id="ok" class="main-container__slide dragend-page">
+            <div class="like-h2"><span>c&#36; </span>500</div>
           </li>
-
           <li class="main-container__slide dragend-page ">
-            <div class="main-container__slide-block">
-              <div>Total value : <span>&euro; </span>70 000</div>
-              <div class="qr-block"></div>
-              <div class="like-h2"><span>&euro;</span>1 600</div>
-            </div>
-            <div class="main-container__buttons">
-              <button type="button" name="button" class="main-container__button main-container__topUp">add</button>
-              <button type="button" name="button" class="main-container__button main-container__exchange">exchange</button>
-            </div>
+            <div class="like-h2"><span>c&euro; </span>1 600</div>
           </li>
-
           <li class="main-container__slide dragend-page">
-            <div class="main-container__slide-block">
-              <div class="qr-block"></div>
-              <div>Total value: <span>RUB </span>70</div>
-              <div class="like-h2"><span>RUB </span>11 500</div>
-            </div>
-            <div class="main-container__buttons">
-              <button type="button" name="button" class="main-container__button main-container__topUp">add</button>
-              <button type="button" name="button" class="main-container__button main-container__exchange">exchange</button>
-            </div>
+            <div class="like-h2"><span>cRUB </span>11 500</div>
           </li>
-
           <li class="main-container__slide dragend-page">
-            <div class="main-container__slide-block">
-              <div class="qr-block"></div>
-              <div>Total val : 70 <span>USD</span></div>
-              <div class="like-h2">11 500 <span>USD</span></div>
-            </div>
-            <div class="main-container__buttons">
-              <button type="button" name="button" class="main-container__button main-container__topUp">add</button>
-              <button type="button" name="button" class="main-container__button main-container__exchange">exchange</button>
-            </div>
+            <div class="like-h2"><span>cBRUB </span>11 500</div>
           </li>
-
-          <li class="main-container__slide dragend-page">
-            <div class="main-container__slide-block">
-              <div class="qr-block"></div>
-              <div>Total val : 70 <span>USD</span></div>
-              <div class="like-h2">11 500 <span>USD</span></div>
-            </div>
-            <div class="main-container__buttons">
-              <button type="button" name="button" class="main-container__button main-container__topUp">add</button>
-              <button type="button" name="button" class="main-container__button main-container__exchange">exchange</button>
-            </div>
-          </li>
-
-          <li class="main-container__slide dragend-page">
-            <div class="main-container__slide-block">
-              <div class="qr-block"></div>
-              <div>Total val : 70 <span>USD</span></div>
-              <div class="like-h2">11 500 <span>USD</span></div>
-            </div>
-            <div class="main-container__buttons">
-              <button type="button" name="button" class="main-container__button main-container__topUp">add</button>
-              <button type="button" name="button" class="main-container__button main-container__exchange">exchange</button>
-            </div>
-          </li>
-
-          <li class="main-container__slide dragend-page">
-            <div class="main-container__slide-block">
-              <div class="qr-block"></div>
-              <div>Total val : 70 <span>USD</span></div>
-              <div class="like-h2">11 500 <span>USD</span></div>
-            </div>
-            <div class="main-container__buttons">
-              <button type="button" name="button" class="main-container__button main-container__topUp">add</button>
-              <button type="button" name="button" class="main-container__button main-container__exchange">exchange</button>
-            </div>
-          </li>
+          <li class="dragend-page"></li>
         </ul>
+      </div>
 
+      <div class="main-container__buttons main-screen">
+          <button type="button" name="button" class="main-container__button main-container__topUp">Top Up</button>
+          <button type="button" name="button" class="main-container__button main-container__exchange">Exchange</button>
       </div>
 
       <div class="exchange-screen">
@@ -137,7 +58,7 @@
               <option value="cUsd">cUsd</option>
               <option value="cEUR">cEUR</option>
               <option value="cRUB">cRUB</option>
-              <option value="cZl">cZl</option>
+              <option value="cBRUB">cBRUB</option>
             </select>
           </div>
           <div class="exchange-header__change"></div>
@@ -146,7 +67,7 @@
               <option value="cEUR">cEUR</option>
               <option value="cUsd">cUsd</option>
               <option value="cRUB">cRUB</option>
-              <option value="cZl">cZl</option>
+              <option value="cBRUB">cBRUB</option>
             </select>
           </div>
           <div class="exchange-header__rate">1<span>cUSD </span>= 0.98<span>cEUR</span></div>
@@ -198,23 +119,44 @@
 
   </div>
 
-  <!-- <footer class="page-footer">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos obcaecati eaque, sapiente ullam voluptate totam earum! Nam ab, dolor non!
-  </footer> -->
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <!-- <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <script src="js/dragend.js"></script>
   <script type="text/javascript">
     $(".demoId").dragend();
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
   <script>
-    $('.nonloop').owlCarousel({
-      center: true,
-      items: 2,
-      loop: false,
-      nav: true,
-      margin: 10
+//    $(document).ready(function(){
+//      $('.nonloop').owlCarousel({
+//        center: true,
+//        items: 2,
+//        loop: true,
+//        nav: true,
+//        margin: 10
+//      });
+//    });
+
+    $(document).ready(function() {
+
+      var owl = $(".nonloop");
+
+      owl.owlCarousel({
+        center: true,
+        items: 2,
+        loop: true,
+        nav: true,
+        margin: 10
+      });
+
+      // Custom Navigation Events
+      $(document).on('click', '.owl-item', function(){
+            n = $(this).index();
+            console.log(n)
+            $('.owl-wrapper').trigger('owl.goTo', n);
+      });
+
+
     });
   </script>
   <script src="js/scripts.js"></script>

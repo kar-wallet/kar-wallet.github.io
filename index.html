@@ -5,8 +5,20 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css">
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">-->
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>-->
+
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/i18n/defaults-*.min.js"></script>-->
+
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css">-->
+  <link rel="stylesheet" href="css/owl.carousel.css">
   <link rel="stylesheet" href="css/screen.css">
   <link rel="stylesheet" href="css/media.css">
   <title>Document</title>
@@ -31,16 +43,24 @@
       <div class="main-container main-screen demoId">
         <ul>
           <li id="ok" class="main-container__slide dragend-page">
-            <div class="like-h2"><span>c&#36; </span>500</div>
+            <div class="like-h2"><span>c&#36; </span> 1 500</div>
+<!--            <button type="button" name="button" class="prev main-screen"></button>-->
+<!--            <button type="button" name="button" class="next main-screen"></button>-->
           </li>
           <li class="main-container__slide dragend-page ">
-            <div class="like-h2"><span>c&euro; </span>1 600</div>
+            <div class="like-h2"><span>c&euro; </span> 2 1 600</div>
+<!--            <button type="button" name="button" class="prev main-screen"></button>-->
+<!--            <button type="button" name="button" class="next main-screen"></button>-->
           </li>
           <li class="main-container__slide dragend-page">
-            <div class="like-h2"><span>cRUB </span>11 500</div>
+            <div class="like-h2"><span>cRUB </span> 3 11 500</div>
+<!--            <button type="button" name="button" class="prev main-screen"></button>-->
+<!--            <button type="button" name="button" class="next main-screen"></button>-->
           </li>
           <li class="main-container__slide dragend-page">
-            <div class="like-h2"><span>cBRUB </span>11 500</div>
+            <div class="like-h2"><span>cBRUB </span> 4 11 500</div>
+<!--            <button type="button" name="button" class="prev main-screen"></button>-->
+<!--            <button type="button" name="button" class="next main-screen"></button>-->
           </li>
           <li class="dragend-page"></li>
         </ul>
@@ -49,26 +69,58 @@
       <div class="main-container__buttons main-screen">
           <button type="button" name="button" class="main-container__button main-container__topUp">Top Up</button>
           <button type="button" name="button" class="main-container__button main-container__exchange">Exchange</button>
+          <div class="main-container__qr main-container__button">
+              <img src="img/qr.jpg" alt="">
+          </div>
       </div>
 
       <div class="exchange-screen">
         <div class="exchange-header">
-          <div class="exchange-header__from">
-            <select>
-              <option value="cUsd">cUsd</option>
-              <option value="cEUR">cEUR</option>
-              <option value="cRUB">cRUB</option>
-              <option value="cBRUB">cBRUB</option>
+          <div class="exchange-header__from exchange-dropdown dropdown">
+<!--
+          <select class="selectpicker">
+              <option>cUsd</option>
+              <option>cEUR</option>
+              <option>cRUB</option>
+              <option>cBRUB</option>
             </select>
+-->
+          <button id="from" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">cUSD</button>
+          <ul class="dropdown-menu">
+            <li><a href="#">cUsd</a></li>
+            <li><a href="#">cEUR</a></li>
+            <li><a href="#">cRUB</a></li>
+            <li><a href="#">cBRUB</a></li>
+          </ul>
+            
+<!--
+           <div class="exchange-header__from-item">cUsd</div>
+           <div class="exchange-header__from__menu exchange-dropdown__menu">
+               <div class="exchange-dropdown__li">cUsd</div>
+               <div class="exchange-dropdown__li">cEUR</div>
+               <div class="exchange-dropdown__li">cRUB</div>
+               <div class="exchange-dropdown__li">cBRUB</div>
+           </div>
+-->
           </div>
           <div class="exchange-header__change"></div>
-          <div class="exchange-header__to">
-            <select>
-              <option value="cEUR">cEUR</option>
-              <option value="cUsd">cUsd</option>
-              <option value="cRUB">cRUB</option>
-              <option value="cBRUB">cBRUB</option>
-            </select>
+          <div class="exchange-header__to exchange-dropdown dropdown">
+              <button id="to" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">cEUR</button>
+<!--              <span class="caret"></span>-->
+              <ul class="dropdown-menu">
+                <li><a href="#">cUsd</a></li>
+                <li><a href="#">cEUR</a></li>
+                <li><a href="#">cRUB</a></li>
+                <li><a href="#">cBRUB</a></li>
+              </ul>
+<!--
+            <div class="exchange-header__to__menu exchange-dropdown__menu">
+               <div class="exchange-dropdown__li">cUsd</div>
+               <div class="exchange-dropdown__li">cEUR</div>
+               <div class="exchange-dropdown__li">cRUB</div>
+               <div class="exchange-dropdown__li">cBRUB</div>
+            </div>
+-->
           </div>
           <div class="exchange-header__rate">1<span>cUSD </span>= 0.98<span>cEUR</span></div>
         </div>
@@ -92,7 +144,7 @@
       <div class="app-footer">
         <div class="transac-history main-screen">
           <div class="transac-history__title">Transaction History</div>
-          <div class="transac-history__all">View All</div>
+          <div class="transac-history__all"><span class="transac-show">View All</span><span class="transac-hide">Hide</span></div>
           <div class="transac-history__element">
             <div class="transac-history__image spent"></div>
             <div class="transac-history__category">Spent</div>
@@ -119,45 +171,37 @@
 
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+  <script src="js/jquery.min.js"></script>
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>-->
+<!--    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+<!-- https://api.jquerymobile.com/swipeleft/-->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>-->
+  <script src="js/hammer.min.js"></script>
   <script src="js/dragend.js"></script>
   <script type="text/javascript">
     $(".demoId").dragend();
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>-->
+  <script src="js/owl.carousel.min.js"></script>
+<!--
   <script>
-//    $(document).ready(function(){
-//      $('.nonloop').owlCarousel({
-//        center: true,
-//        items: 2,
-//        loop: true,
-//        nav: true,
-//        margin: 10
-//      });
-//    });
-
-    $(document).ready(function() {
-
-      var owl = $(".nonloop");
-
-      owl.owlCarousel({
+    $('.selectpicker').selectpicker({
+  style: 'btn-info',
+  size: 4
+});</script>
+-->
+  <script>
+    $(document).ready(function(){
+      $('.nonloop').owlCarousel({
         center: true,
         items: 2,
         loop: true,
         nav: true,
         margin: 10
       });
-
-      // Custom Navigation Events
-      $(document).on('click', '.owl-item', function(){
-            n = $(this).index();
-            console.log(n)
-            $('.owl-wrapper').trigger('owl.goTo', n);
-      });
-
-
     });
+
   </script>
   <script src="js/scripts.js"></script>
 </body>

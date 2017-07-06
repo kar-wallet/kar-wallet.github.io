@@ -34,36 +34,37 @@
   <div class="page-wrapper">
     <div class="app-container">
       <div class="header-currency main-screen">
-        <div id="slider" class="nonloop owl1 owl-carousel"><div class="item"><div>cUSD</div></div><div class="item"><div>cEUR</div></div><div class="item"><div>cRUB</div></div><div class="item"><div>cBRUB</div></div></div>
+        <div class="owl1 owl-carousel"><div class="item"><div>cUSD</div></div><div class="item"><div>cEURO</div></div><div class="item"><div>cRUB</div></div><div class="item"><div>cBRUB</div></div></div>
       </div>
 
       <button type="button" name="button" class="prev main-screen"></button>
       <button type="button" name="button" class="next main-screen"></button>
 
-      <div class="main-container main-screen demoId">
+        <div class="main-container main-screen">
+            <div class="owl2 owl-carousel">
+                <div class="item"><div class="like-h2">1 <span>cUSD </span> 500</div></div>
+                <div class="item"><div class="like-h2">2 <span>cEURO </span> 1 600</div></div>
+                <div class="item"><div class="like-h2">3 <span>cRUB </span> 11 500</div></div>
+                <div class="item"><div class="like-h2">4 <span>cBRUB </span> 11 500</div></div>
+            </div>
+        
+<!--
         <ul>
           <li id="ok" class="main-container__slide dragend-page">
             <div class="like-h2"><span>c&#36; </span> 1 500</div>
-<!--            <button type="button" name="button" class="prev main-screen"></button>-->
-<!--            <button type="button" name="button" class="next main-screen"></button>-->
           </li>
           <li class="main-container__slide dragend-page ">
             <div class="like-h2"><span>c&euro; </span> 2 1 600</div>
-<!--            <button type="button" name="button" class="prev main-screen"></button>-->
-<!--            <button type="button" name="button" class="next main-screen"></button>-->
           </li>
           <li class="main-container__slide dragend-page">
             <div class="like-h2"><span>cRUB </span> 3 11 500</div>
-<!--            <button type="button" name="button" class="prev main-screen"></button>-->
-<!--            <button type="button" name="button" class="next main-screen"></button>-->
           </li>
           <li class="main-container__slide dragend-page">
             <div class="like-h2"><span>cBRUB </span> 4 11 500</div>
-<!--            <button type="button" name="button" class="prev main-screen"></button>-->
-<!--            <button type="button" name="button" class="next main-screen"></button>-->
           </li>
           <li class="dragend-page"></li>
         </ul>
+-->
       </div>
 
       <div class="main-container__buttons main-screen">
@@ -193,9 +194,16 @@
 -->
   <script>
     $(document).ready(function(){
-      $('.nonloop').owlCarousel({
+      $('.owl1').owlCarousel({
         center: true,
         items: 2,
+        loop: true,
+        nav: true,
+        margin: 10
+      });
+        
+      $('.owl2').owlCarousel({
+        items: 1,
         loop: true,
         nav: true,
         margin: 10

@@ -39,49 +39,49 @@ $(function() {
     $(".main-screen").show();
   });
 
-  $(".demoId").dragend({
-    afterInitialize: function() {
-      this.container.style.visibility = "visible";
-    },
-    onSwipeEnd: function() {
-      var first = this.pages[0],
-          last = this.pages[this.pages.length - 1];
-
-      $(".prev, .next").removeClass("deactivated");
-      $(".nav li").removeClass("active");
-
-      if (first === this.activeElement) {
-        $(".prev").addClass("deactivated")
-      };
-
-      if (last === this.activeElement) {
-        // $(".next").addClass("deactivated")
-        this.jumpToPage(1);
-      }
-
-      $(".nav li").eq(this.page).addClass("active");
-
-    }
-  });
-
-  $(".prev").click(function() {
-    $(".demoId").dragend("right");
-  });
-
-  $(".next").click(function() {
-    $(".demoId").dragend("left");
-  });
-
-  $(".nav").click(function() {
-    var page = $(event.target).data("page");
-
-    $(".demoId").dragend({
-      scrollToPage: page
-    });
-
-    $(event.target).addClass("active");
-
-  });
+//  $(".demoId").dragend({
+//    afterInitialize: function() {
+//      this.container.style.visibility = "visible";
+//    },
+//    onSwipeEnd: function() {
+//      var first = this.pages[0],
+//          last = this.pages[this.pages.length - 1];
+//
+//      $(".prev, .next").removeClass("deactivated");
+//      $(".nav li").removeClass("active");
+//
+//      if (first === this.activeElement) {
+//        $(".prev").addClass("deactivated")
+//      };
+//
+//      if (last === this.activeElement) {
+//        // $(".next").addClass("deactivated")
+//        //        this.jumpToPage(1);
+//      }
+//
+//      $(".nav li").eq(this.page).addClass("active");
+//
+//    }
+//  });
+//
+//  $(".prev").click(function() {
+//    $(".demoId").dragend("right");
+//  });
+//
+//  $(".next").click(function() {
+//    $(".demoId").dragend("left");
+//  });
+//
+//  $(".nav").click(function() {
+//    var page = $(event.target).data("page");
+//
+//    $(".demoId").dragend({
+//      scrollToPage: page
+//    });
+//
+//    $(event.target).addClass("active");
+//
+//  });
     
     $(".exchange-header__change").click(function() {
        var from = $("#from").html();
@@ -116,22 +116,36 @@ $(function() {
 //    $(".next").click();
 //});
     
-//$('.dragend-page').each(function(ev){
+$('.owl2 .owl-item').each(function(ev){
+var $this = $(this);
+var mc = new Hammer(this);
+    mc.on("swipeleft", function(ev) {
+        console.log('left: ', ev);
+//        $(".owl-next").click();
+//        $(".owl1 .owl-item").swipeleft();
+//        return false;
+    });
+    mc.on("swiperight", function(ev) {
+        console.log('right: ', ev);
+//        $(".owl1 .owl-item'").first().swipeleft();
+//        return false;
+    });
+});
+
+//$('.owl1 .owl-item').each(function(ev){
 //var $this = $(this);
 //var mc = new Hammer(this);
 //    mc.on("swipeleft", function(ev) {
 //        console.log('left: ', ev);
 //        $(".prev").click();
-//        .demoId("left");
-//        return false;
+////        return false;
 //    });
 //    mc.on("swiperight", function(ev) {
 //        console.log('right: ', ev);
 //        $(".next").click();
-//        return false;
+////        return false;
 //    });
 //});
-    
     
 });
 

@@ -31,40 +31,35 @@
 </head>
 <body>
 
+  <!-- <div class="owl-one owl-carousel owl-theme">
+    <div class="item" style="width:250px; height: 200px; background-color: green"></div>
+    <div class="item" style="width:250px; height: 200px; background-color: green"></div>
+    <div class="item" style="width:250px; height: 200px; background-color: green"></div>
+</div>
+
+<div class="owl-two owl-carousel owl-theme">
+    <div class="item" style="width:250px; height: 200px; background-color: blue"></div>
+    <div class="item" style="width:250px; height: 200px; background-color: blue"></div>
+    <div class="item" style="width:250px; height: 200px; background-color: blue"></div>
+</div> -->
+
   <div class="page-wrapper">
     <div class="app-container">
       <div class="header-currency main-screen">
-        <div class="owl1 owl-carousel"><div class="item"><div>cUSD</div></div><div class="item"><div>cEURO</div></div><div class="item"><div>cRUB</div></div><div class="item"><div>cBRUB</div></div></div>
+        <div class="owl-one owl-carousel"><div class="item"><div>cUSD</div></div><div class="item"><div>cEURO</div></div><div class="item"><div>cRUB</div></div><div class="item"><div>cBRUB</div></div></div>
       </div>
 
       <button type="button" name="button" class="prev main-screen"></button>
       <button type="button" name="button" class="next main-screen"></button>
 
         <div class="main-container main-screen">
-            <div class="owl2 owl-carousel">
-                <div class="item"><div class="like-h2">1 <span>cUSD </span> 500</div></div>
-                <div class="item"><div class="like-h2">2 <span>cEURO </span> 1 600</div></div>
-                <div class="item"><div class="like-h2">3 <span>cRUB </span> 11 500</div></div>
-                <div class="item"><div class="like-h2">4 <span>cBRUB </span> 11 500</div></div>
+            <div class="owl-two owl-carousel">
+                <div class="item"><div class="like-h2"><span>cUSD </span> 500</div></div>
+                <div class="item"><div class="like-h2"><span>cEURO </span> 1 600</div></div>
+                <div class="item"><div class="like-h2"><span>cRUB </span> 11 500</div></div>
+                <div class="item"><div class="like-h2"><span>cBRUB </span> 11 500</div></div>
             </div>
-        
-<!--
-        <ul>
-          <li id="ok" class="main-container__slide dragend-page">
-            <div class="like-h2"><span>c&#36; </span> 1 500</div>
-          </li>
-          <li class="main-container__slide dragend-page ">
-            <div class="like-h2"><span>c&euro; </span> 2 1 600</div>
-          </li>
-          <li class="main-container__slide dragend-page">
-            <div class="like-h2"><span>cRUB </span> 3 11 500</div>
-          </li>
-          <li class="main-container__slide dragend-page">
-            <div class="like-h2"><span>cBRUB </span> 4 11 500</div>
-          </li>
-          <li class="dragend-page"></li>
-        </ul>
--->
+
       </div>
 
       <div class="main-container__buttons main-screen">
@@ -78,14 +73,7 @@
       <div class="exchange-screen">
         <div class="exchange-header">
           <div class="exchange-header__from exchange-dropdown dropdown">
-<!--
-          <select class="selectpicker">
-              <option>cUsd</option>
-              <option>cEUR</option>
-              <option>cRUB</option>
-              <option>cBRUB</option>
-            </select>
--->
+
           <button id="from" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">cUSD</button>
           <ul class="dropdown-menu">
             <li><a href="#">cUsd</a></li>
@@ -93,16 +81,7 @@
             <li><a href="#">cRUB</a></li>
             <li><a href="#">cBRUB</a></li>
           </ul>
-            
-<!--
-           <div class="exchange-header__from-item">cUsd</div>
-           <div class="exchange-header__from__menu exchange-dropdown__menu">
-               <div class="exchange-dropdown__li">cUsd</div>
-               <div class="exchange-dropdown__li">cEUR</div>
-               <div class="exchange-dropdown__li">cRUB</div>
-               <div class="exchange-dropdown__li">cBRUB</div>
-           </div>
--->
+
           </div>
           <div class="exchange-header__change"></div>
           <div class="exchange-header__to exchange-dropdown dropdown">
@@ -114,14 +93,7 @@
                 <li><a href="#">cRUB</a></li>
                 <li><a href="#">cBRUB</a></li>
               </ul>
-<!--
-            <div class="exchange-header__to__menu exchange-dropdown__menu">
-               <div class="exchange-dropdown__li">cUsd</div>
-               <div class="exchange-dropdown__li">cEUR</div>
-               <div class="exchange-dropdown__li">cRUB</div>
-               <div class="exchange-dropdown__li">cBRUB</div>
-            </div>
--->
+
           </div>
           <div class="exchange-header__rate">1<span>cUSD </span>= 0.98<span>cEUR</span></div>
         </div>
@@ -192,23 +164,42 @@
   size: 4
 });</script>
 -->
+
+<script>
+$(document).ready(function(){
+  $('.owl-one').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      center: true,
+      items: 3
+  });
+
+  $('.owl-two').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      items: 1
+  });
+});
+</script>
   <script>
-    $(document).ready(function(){
-      $('.owl1').owlCarousel({
-        center: true,
-        items: 2,
-        loop: true,
-        nav: true,
-        margin: 10
-      });
-        
-      $('.owl2').owlCarousel({
-        items: 1,
-        loop: true,
-        nav: true,
-        margin: 10
-      });
-    });
+    // $(document).ready(function(){
+    //   $('.owl1').owlCarousel({
+    //     center: true,
+    //     items: 2,
+    //     loop: true,
+    //     nav: true,
+    //     margin: 10
+    //   });
+    //
+    //   $('.owl2').owlCarousel({
+    //     items: 1,
+    //     loop: true,
+    //     nav: true,
+    //     margin: 10
+    //   });
+    // });
 
   </script>
   <script src="js/scripts.js"></script>

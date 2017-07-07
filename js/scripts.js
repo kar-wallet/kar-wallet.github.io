@@ -82,21 +82,21 @@ $(function() {
 //    $(event.target).addClass("active");
 //
 //  });
-    
+
     $(".exchange-header__change").click(function() {
        var from = $("#from").html();
        var to = $("#to").html();
        $("#to").text(from);
        $("#from").text(to);
     });
-    
+
     $(".transac-history__all").click(function() {
         $(".app-footer").toggleClass("show-history");
 //        $(".app-footer").css({"top":"0","height":"100%"});
 //        $(".transac-history").css({"height":"100%"});
 //        $(".transac-history__hide").show();
     });
-    
+
 //    $(".transac-history__all").click(function() {
 //        $(".app-footer").css({"top":"0","height":"100%"});
 //        $(".transac-history").css({"height":"100%"});
@@ -115,38 +115,39 @@ $(function() {
 //    console.log('right: ', ev);
 //    $(".next").click();
 //});
-    
-$('.owl2 .owl-item').each(function(ev){
+
+$('.owl-two .owl-item').each(function(ev){
 var $this = $(this);
 var mc = new Hammer(this);
     mc.on("swipeleft", function(ev) {
         console.log('left: ', ev);
+        $(".owl-one .owl-next").click();
 //        $(".owl-next").click();
 //        $(".owl1 .owl-item").swipeleft();
-//        return false;
+      //  return false;
     });
     mc.on("swiperight", function(ev) {
         console.log('right: ', ev);
-//        $(".owl1 .owl-item'").first().swipeleft();
-//        return false;
+       $(".owl-one .owl-prev").click();
+      //  return false;
     });
 });
 
-//$('.owl1 .owl-item').each(function(ev){
-//var $this = $(this);
-//var mc = new Hammer(this);
-//    mc.on("swipeleft", function(ev) {
-//        console.log('left: ', ev);
-//        $(".prev").click();
-////        return false;
-//    });
-//    mc.on("swiperight", function(ev) {
-//        console.log('right: ', ev);
-//        $(".next").click();
-////        return false;
-//    });
-//});
-    
+$('.owl-one .owl-item').each(function(ev){
+var $this = $(this);
+var mc = new Hammer(this);
+   mc.on("swipeleft", function(ev) {
+       console.log('left: ', ev);
+       $(".owl-two .owl-next").click();
+//        return false;
+   });
+   mc.on("swiperight", function(ev) {
+       console.log('right: ', ev);
+       $(".owl-one .owl-prev").click();
+//        return false;
+   });
+});
+
 });
 
 

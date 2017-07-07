@@ -33,9 +33,25 @@
 
   <div class="page-wrapper">
     <div class="app-container">
-<!-- 
-      <button type="button" name="button" class="prev main-screen"></button>
-      <button type="button" name="button" class="next main-screen"></button> -->
+
+      <div class="invoice-list__container">
+        <div class="invoice-list ">
+          <h2 class="invoice-list__title">Exchange</h2>
+          <div class="invoice-list__row"><div class="invoice-list__cell invoice-list__cell-title">Exchange:</div><div class="invoice-list__cell invoice-list__cell-value">11 cUSD</div></div>
+          <div class="invoice-list__row"><div class="invoice-list__cell invoice-list__cell-title">Received:</div><div class="invoice-list__cell invoice-list__cell-value">11 cEUR</div></div>
+          <div class="invoice-list__row"><div class="invoice-list__cell invoice-list__cell-title">Rate:</div><div class="invoice-list__cell invoice-list__cell-value">1 cUSD = 1cEUR</div></div>
+          <div class="invoice-list__row"><div class="invoice-list__cell invoice-list__cell-title">Fee:</div><div class="invoice-list__cell invoice-list__cell-value">No Fee</div></div>
+          <div class="invoice-list__button">Done</div>
+        </div>
+      </div>
+
+      <div class="scan-code-container">
+        <div class="scan-code">
+          <h2 class="scan-code__title">Scan Payment Code</h2>
+          <div class="scan-code__window"></div>
+          <div class="scan-code__button">Cancel</div>
+        </div>
+      </div>
 
         <div class="main-container main-screen">
             <div class="owl-two owl-carousel">
@@ -60,17 +76,17 @@
                   <div class="item-head">
                     <span class="item-head__prev">cEURO</span>
                     <span class="item-head__current">cRUB</span>
-                    <span class="item-head__next">cBRUB</span>
+                    <span class="item-head__next">cBYN</span>
                   </div>
                   <div class="like-h2"><span>cRUB</span>11 500</div>
                 </div>
                 <div class="item">
                   <div class="item-head">
                     <span class="item-head__prev">cRUB</span>
-                    <span class="item-head__current">cBRUB</span>
+                    <span class="item-head__current">cBYN</span>
                     <span class="item-head__next"></span>
                   </div>
-                  <div class="like-h2"><span>cBRUB</span>11 500</div></div>
+                  <div class="like-h2"><span>cBYN</span>11 500</div></div>
             </div>
 
         </div>
@@ -90,7 +106,7 @@
               <option>cUsd</option>
               <option>cEUR</option>
               <option>cRUB</option>
-              <option>cBRUB</option>
+              <option>cBYN</option>
             </select>
 
           </div>
@@ -100,7 +116,7 @@
               <option>cEUR</option>
               <option>cEUR</option>
               <option>cRUB</option>
-              <option>cBRUB</option>
+              <option>cBYN</option>
             </select>
 
           </div>
@@ -155,10 +171,10 @@
   <script src="js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
   <script src="js/hammer.min.js"></script>
-  <script src="js/dragend.js"></script>
-  <script type="text/javascript">
+  <!-- <script src="js/dragend.js"></script> -->
+  <!-- <script type="text/javascript">
     $(".demoId").dragend();
-  </script>
+  </script> -->
   <script src="js/owl.carousel.min.js"></script>
   <script>
     $('.select-from').selectpicker({

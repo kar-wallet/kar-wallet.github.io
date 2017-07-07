@@ -781,3 +781,100 @@ input[type=number]::-webkit-outer-spin-button
 //https://github.com/nolimits4web/Swiper/issues/81
 //http://www.javascriptkit.com/javatutors/touchevents2.shtml
 //https://codepen.io/jtangelder/pen/ABFnd
+
+.invoice-list__container
+  position: absolute
+  left: 0
+  top: 0
+  display: inline-block
+  width: 100%
+  height: 100%
+  z-index: 10
+  display: none
+
+.invoice-list
+  display: inline-block
+  position: relative
+  width: 100%
+  height: 100%
+  color: #000
+  background-color: #fff
+
+.invoice-list__title
+  color: #000
+  text-align: center
+  margin: 40px auto 40px auto
+
+.invoice-list__button
+  padding: 15px 0px
+  margin: 50px auto 20px auto
+  display: block
+  border-radius: 3px
+  color: #fff
+  max-width: 200px
+  // width: 100%
+  text-align: center
+  background-color: #2584ea
+  &:hover
+    cursor: pointer
+
+.invoice-list__row
+  border-bottom: 1px solid #f1f1f1
+  padding: 15px 0
+  letter-spacing: -.36em
+
+.invoice-list__cell
+  width: 50%
+  line-height: 2
+  display: inline-block
+  letter-spacing: normal
+  padding: 0 20px
+  font-weight: bold
+  &:last-child
+    text-align: right
+    // font-weight: normal
+    color: #2584ea
+
+.scan-code-container
+  display: inline-block
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  background-color: #fff
+  z-index: 11
+  display: none
+
+.scan-code
+  position: relative
+  display: inline-block
+  width: 100%
+  margin: 0
+  height: 100%
+  color: #000
+  text-align: center
+
+.scan-code__title
+  margin: 40px auto 60px auto
+
+.scan-code__window
+  display: block
+  background-color: #eee
+  margin: 0 auto
+  width: 200px
+  height: 200px
+  border: 1px solid #ccc
+
+.scan-code__button
+  margin: 70px auto
+  background-color: #2584ea
+  max-width: 200px
+  padding: 15px 0
+  color: #fff
+  border-radius: 3px
+  &:hover
+    cursor: pointer
+
+button:hover, a:hover
+  cursor: pointer

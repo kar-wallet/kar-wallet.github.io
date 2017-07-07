@@ -26,7 +26,21 @@ $(function() {
      $(".special-inpNumber-cont__currency").text(to);
      $(".select-to .filter-option").text(from);
      $(".select-from .filter-option").text(to);
+  });
 
+  $(".main-container__qr").click(function() {
+    $(".invoice-list__container").show();
+  });
+  $(".invoice-list__button").click(function() {
+    $(".invoice-list__container").hide();
+  });
+
+  $(".main-container__topUp").click(function() {
+    $(".scan-code-container").show();
+  });
+
+  $(".scan-code__button").click(function() {
+    $(".scan-code-container").hide();
   });
 
   $(".transac-history__all").click(function() {

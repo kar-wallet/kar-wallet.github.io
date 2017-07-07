@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 
 
 <!-- (Optional) Latest compiled and minified JavaScript translation files -->
@@ -31,36 +31,49 @@
 </head>
 <body>
 
-  <!-- <div class="owl-one owl-carousel owl-theme">
-    <div class="item" style="width:250px; height: 200px; background-color: green"></div>
-    <div class="item" style="width:250px; height: 200px; background-color: green"></div>
-    <div class="item" style="width:250px; height: 200px; background-color: green"></div>
-</div>
-
-<div class="owl-two owl-carousel owl-theme">
-    <div class="item" style="width:250px; height: 200px; background-color: blue"></div>
-    <div class="item" style="width:250px; height: 200px; background-color: blue"></div>
-    <div class="item" style="width:250px; height: 200px; background-color: blue"></div>
-</div> -->
-
   <div class="page-wrapper">
     <div class="app-container">
-      <div class="header-currency main-screen">
-        <div class="owl-one owl-carousel"><div class="item"><div>cUSD</div></div><div class="item"><div>cEURO</div></div><div class="item"><div>cRUB</div></div><div class="item"><div>cBRUB</div></div></div>
-      </div>
 
       <button type="button" name="button" class="prev main-screen"></button>
       <button type="button" name="button" class="next main-screen"></button>
 
         <div class="main-container main-screen">
             <div class="owl-two owl-carousel">
-                <div class="item"><div class="like-h2"><span>cUSD </span> 500</div></div>
-                <div class="item"><div class="like-h2"><span>cEURO </span> 1 600</div></div>
-                <div class="item"><div class="like-h2"><span>cRUB </span> 11 500</div></div>
-                <div class="item"><div class="like-h2"><span>cBRUB </span> 11 500</div></div>
+                <div class="item">
+                  <div class="item-head">
+                    <span class="item-head__prev"></span>
+                    <span class="item-head__current">cUSD</span>
+                    <span class="item-head__next">cEURO</span>
+                  </div>
+                  <div class="like-h2"><span>cUSD </span>1 500</div>
+                </div>
+
+                <div class="item">
+                  <div class="item-head">
+                    <span class="item-head__prev">cUSD</span>
+                    <span class="item-head__current">cEURO</span>
+                    <span class="item-head__next">cRUB</span>
+                  </div>
+                <div class="like-h2"><span>cEURO</span>1 600</div></div>
+
+                <div class="item">
+                  <div class="item-head">
+                    <span class="item-head__prev">cEURO</span>
+                    <span class="item-head__current">cRUB</span>
+                    <span class="item-head__next">cBRUB</span>
+                  </div>
+                  <div class="like-h2"><span>cRUB</span> 11 500</div>
+                </div>
+                <div class="item">
+                  <div class="item-head">
+                    <span class="item-head__prev">cRUB</span>
+                    <span class="item-head__current">cBRUB</span>
+                    <span class="item-head__next"></span>
+                  </div>
+                  <div class="like-h2"><span>cBRUB </span> 11 500</div></div>
             </div>
 
-      </div>
+        </div>
 
       <div class="main-container__buttons main-screen">
           <button type="button" name="button" class="main-container__button main-container__topUp">Top Up</button>
@@ -73,26 +86,22 @@
       <div class="exchange-screen">
         <div class="exchange-header">
           <div class="exchange-header__from exchange-dropdown dropdown">
-
-          <button id="from" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">cUSD</button>
-          <ul class="dropdown-menu">
-            <li><a href="#">cUsd</a></li>
-            <li><a href="#">cEUR</a></li>
-            <li><a href="#">cRUB</a></li>
-            <li><a href="#">cBRUB</a></li>
-          </ul>
+            <select class="selectpicker select-from">
+              <option>cUsd</option>
+              <option>cEUR</option>
+              <option>cRUB</option>
+              <option>cBRUB</option>
+            </select>
 
           </div>
           <div class="exchange-header__change"></div>
           <div class="exchange-header__to exchange-dropdown dropdown">
-              <button id="to" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">cEUR</button>
-<!--              <span class="caret"></span>-->
-              <ul class="dropdown-menu">
-                <li><a href="#">cUsd</a></li>
-                <li><a href="#">cEUR</a></li>
-                <li><a href="#">cRUB</a></li>
-                <li><a href="#">cBRUB</a></li>
-              </ul>
+            <select class="selectpicker select-to">
+              <option>cUsd</option>
+              <option>cEUR</option>
+              <option>cRUB</option>
+              <option>cBRUB</option>
+            </select>
 
           </div>
           <div class="exchange-header__rate">1<span>cUSD </span>= 0.98<span>cEUR</span></div>
@@ -100,7 +109,7 @@
         <div class="exchange-content">
           <form action="">
             <div class="special-inpNumber-cont">
-              <input type="number" name="quantity" min="1" max="50000" placeholder="Enter your value" value="10" class="exchange-content__value">
+              <input type="number" name="quantity" min="1" max="50000" onfocus="this.value = this.value;" autofocus placeholder="Enter your value"  class="exchange-content__value">
               <div class="special-inpNumber-cont__currency">cUSD</div>
             </div>
 
@@ -108,7 +117,6 @@
               <img src="img/qr.jpg" alt="">
             </div>
 
-            <!-- <button type="reset" value="Reset" class="exchange-content__reset">Cancel</button> -->
             <div class="exchange-content__reset">Cancel</div>
           </form>
         </div>
@@ -144,64 +152,44 @@
 
   </div>
 
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
   <script src="js/jquery.min.js"></script>
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>-->
-<!--    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
-<!-- https://api.jquerymobile.com/swipeleft/-->
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
   <script src="js/hammer.min.js"></script>
   <script src="js/dragend.js"></script>
   <script type="text/javascript">
     $(".demoId").dragend();
   </script>
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>-->
   <script src="js/owl.carousel.min.js"></script>
-<!--
   <script>
-    $('.selectpicker').selectpicker({
-  style: 'btn-info',
-  size: 4
-});</script>
--->
-
-<script>
-$(document).ready(function(){
-  $('.owl-one').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:true,
-      center: true,
-      items: 3
-  });
-
-  $('.owl-two').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:true,
-      items: 1
-  });
-});
-</script>
+    $('.select-from').selectpicker({
+      style: 'btn-info',
+      size: 4
+    });
+    $('.select-to').selectpicker({
+      style: 'btn-info',
+      size: 4
+    });
+  </script>
   <script>
-    // $(document).ready(function(){
-    //   $('.owl1').owlCarousel({
-    //     center: true,
-    //     items: 2,
-    //     loop: true,
-    //     nav: true,
-    //     margin: 10
-    //   });
-    //
-    //   $('.owl2').owlCarousel({
-    //     items: 1,
-    //     loop: true,
-    //     nav: true,
-    //     margin: 10
-    //   });
-    // });
+    $(document).ready(function(){
+      // $('.owl-one').owlCarousel({
+      //     loop:true,
+      //     margin:10,
+      //     nav:true,
+      //     center: true,
+      //     items: 3,
+      //     scrollPerPage : true
+      // });
 
+      $('.owl-two').owlCarousel({
+          loop:true,
+          margin:10,
+          nav:true,
+          items: 1
+      });
+    });
   </script>
   <script src="js/scripts.js"></script>
+
 </body>
 </html>

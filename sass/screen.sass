@@ -340,11 +340,20 @@ ul .dragend-page
   display: none
 
 
+.bootstrap-select>select
+  left: 0
+
+.bs-caret
+  position: absolute
+  right: 10px
+  top: 50%
+
 .exchange-header
   // outline: 1px solid red
   // height: 40px
   // background-color: #fff
   letter-spacing: -.36em
+  max-height: 42px
   .ui-select span
     display: none
   select
@@ -377,8 +386,42 @@ ul .dragend-page
   vertical-align: top
   letter-spacing: normal
 
-.exchange-dropdown
+// .exchange-select
   position: relative
+
+.owl-two
+  &::after
+    position: absolute
+    top: 35px
+    left: 50%
+    width: 5px
+    height: 5px
+    z-index: 2
+    background-color: #fff
+    border-radius: 50%
+    display: block
+    content: ""
+
+.item-head
+  position: relative
+
+.item-head__prev
+  position: absolute
+  top: 50%
+  left: 70px
+  // outline: 1px solid green
+  opacity: 0.4
+
+.item-head__current
+  // outline: 1px solid red
+  top: 9px
+  position: relative
+
+.item-head__next
+  position: absolute
+  top: 50%
+  right: 70px
+  opacity: 0.5
 
 .exchange-header__from__menu
   position: absolute
@@ -437,7 +480,7 @@ select
   position: absolute
   max-width: 60px
   top: 0
-  right: 10px
+  left: 10px
   color: #ccc
   line-height: 40px
   //padding-right: 10px
@@ -446,7 +489,7 @@ select
 .exchange-content__value
   display: block
   width: 100%
-  padding: 10px 60px 10px 15px
+  padding: 10px 15px 10px 65px
   border: 1px solid #ccc
   border-radius: 3px
   text-align: right
@@ -669,7 +712,25 @@ input[type=number]::-webkit-outer-spin-button
     background-color: #fff
     border: none
     border-radius: 0
-    padding: 12px 5px
+    // padding: 12px 5px
+
+.bootstrap-select
+  max-width: 100%
+.bootstrap-select.btn-group .dropdown-toggle
+  outline: none !important
+  overflow: hidden
+  height: 42px
+  max-width: 100%
+  .filter-option
+    text-align: center
+    padding: 12px 0
+    // position: absolute
+    // left: 50%
+    // top: 50%
+
+.exchange-header__from
+  .bs-caret
+    margin-right: 10px
 
 //ruseller
 //http://www.java-study.ru/85-zamena-dr.html

@@ -1,24 +1,4 @@
 $(function() {
-  // $( ".currency-header" ).scrollLeft( scr );
-  //
-  // var scr = 120;
-  //
-  // $(".currency-header__item").on("swipeleft",function(){
-  //   $( ".currency-header" ).scrollLeft( scr );
-  //   scr += 120;
-  //   console.log(scr);
-  // });
-  //
-  //
-  // $(".currency-header__item").on("swiperight",function(){
-  //   // $(".currency-header").animate({ scrollLeft: $(this).scrollLeft(120) }, duration);
-  //   $( ".currency-header" ).scrollLeft( scr );
-  //   scr -= 120;
-  //   console.log(scr);
-  // });
-  // $("p").on("swiperight",function(){
-  //   alert("You swiped right!");
-  // });
   $(".next").click(function(){
     $(".owl-next").click();
   });
@@ -39,116 +19,46 @@ $(function() {
     $(".main-screen").show();
   });
 
-//  $(".demoId").dragend({
-//    afterInitialize: function() {
-//      this.container.style.visibility = "visible";
-//    },
-//    onSwipeEnd: function() {
-//      var first = this.pages[0],
-//          last = this.pages[this.pages.length - 1];
-//
-//      $(".prev, .next").removeClass("deactivated");
-//      $(".nav li").removeClass("active");
-//
-//      if (first === this.activeElement) {
-//        $(".prev").addClass("deactivated")
-//      };
-//
-//      if (last === this.activeElement) {
-//        // $(".next").addClass("deactivated")
-//        //        this.jumpToPage(1);
-//      }
-//
-//      $(".nav li").eq(this.page).addClass("active");
-//
-//    }
-//  });
-//
-//  $(".prev").click(function() {
-//    $(".demoId").dragend("right");
-//  });
-//
-//  $(".next").click(function() {
-//    $(".demoId").dragend("left");
-//  });
-//
-//  $(".nav").click(function() {
-//    var page = $(event.target).data("page");
-//
-//    $(".demoId").dragend({
-//      scrollToPage: page
-//    });
-//
-//    $(event.target).addClass("active");
-//
-//  });
+  $(".exchange-header__change").click(function() {
+     var from = $(".select-from .filter-option").html();
+     console.log(from);
+     var to = $(".select-to .filter-option").html();
+     $(".select-to .filter-option").text(from);
+     $(".select-from .filter-option").text(to);
+  });
 
-    $(".exchange-header__change").click(function() {
-       var from = $("#from").html();
-       var to = $("#to").html();
-       $("#to").text(from);
-       $("#from").text(to);
-    });
-
-    $(".transac-history__all").click(function() {
-        $(".app-footer").toggleClass("show-history");
-//        $(".app-footer").css({"top":"0","height":"100%"});
-//        $(".transac-history").css({"height":"100%"});
-//        $(".transac-history__hide").show();
-    });
-
-//    $(".transac-history__all").click(function() {
-//        $(".app-footer").css({"top":"0","height":"100%"});
-//        $(".transac-history").css({"height":"100%"});
-//        $(".transac-history__hide").show();
-//    });
+  $(".transac-history__all").click(function() {
+      $(".app-footer").toggleClass("show-history");
+  });
 
 
+  $('.owl-two .owl-item').each(function(ev){
+  var $this = $(this);
+  var mc = new Hammer(this);
+      mc.on("swipeleft", function(ev) {
+          // console.log('left: ', ev);
+          $(".owl-one .owl-next").click();
+      });
+      mc.on("swiperight", function(ev) {
+          // console.log('right: ', ev);
+         $(".owl-one .owl-prev").click();
+      });
+  });
 
-//var resim = document.getElementById('ok');
-//    var resim = $('.dragend-page');
-//    Hammer(resim).on('swipeleft', function(ev){
-//    console.log('left: ', ev);
-//    $(".prev").click();
-//});
-//    Hammer(resim).on('swiperight', function(ev){
-//    console.log('right: ', ev);
-//    $(".next").click();
-//});
+  $('.owl-one .owl-item').each(function(ev){
+  var $this = $(this);
+  var mc = new Hammer(this);
+     mc.on("swipeleft", function(ev) {
+        //  console.log('left: ', ev);
+         $(".owl-two .owl-next").click();
+     });
+     mc.on("swiperight", function(ev) {
+        //  console.log('right: ', ev);
+         $(".owl-two .owl-prev").click();
+     });
+  });
 
-$('.owl-two .owl-item').each(function(ev){
-var $this = $(this);
-var mc = new Hammer(this);
-    mc.on("swipeleft", function(ev) {
-        console.log('left: ', ev);
-        $(".owl-one .owl-next").click();
-//        $(".owl-next").click();
-//        $(".owl1 .owl-item").swipeleft();
-      //  return false;
-    });
-    mc.on("swiperight", function(ev) {
-        console.log('right: ', ev);
-       $(".owl-one .owl-prev").click();
-      //  return false;
-    });
-});
-
-$('.owl-one .owl-item').each(function(ev){
-var $this = $(this);
-var mc = new Hammer(this);
-   mc.on("swipeleft", function(ev) {
-       console.log('left: ', ev);
-       $(".owl-two .owl-next").click();
-//        return false;
-   });
-   mc.on("swiperight", function(ev) {
-       console.log('right: ', ev);
-       $(".owl-one .owl-prev").click();
-//        return false;
-   });
-});
-
-});
+  });
 
 
 /* ========================================================================
@@ -316,13 +226,3 @@ var mc = new Hammer(this);
     .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
 
 }(jQuery);
-
-// var myElement = document.getElementsByClassName("dragend-page");
-// create a simple instance
-// by default, it only adds horizontal recognizers
-// var mc = new Hammer(myElement);
-
-// listen to events...
-// mc.on("panleft panright tap press", function(ev) {
-//     myElement.textContent = ev.type +" gesture detected.";
-// });

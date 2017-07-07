@@ -23,8 +23,10 @@ $(function() {
      var from = $(".select-from .filter-option").html();
      console.log(from);
      var to = $(".select-to .filter-option").html();
+     $(".special-inpNumber-cont__currency").text(to);
      $(".select-to .filter-option").text(from);
      $(".select-from .filter-option").text(to);
+
   });
 
   $(".transac-history__all").click(function() {

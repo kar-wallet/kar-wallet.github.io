@@ -131,6 +131,7 @@ button
   text-align: center
   span
     font-size: 22px
+    margin-right: 20px
 
 .main-container
   position: relative
@@ -143,15 +144,15 @@ button
   .owl-item
     opacity: 1
 
-.prev
-  left: 20px
-  background: url("../img/double-left-chevron.svg") no-repeat
-  background: url("../img/back.svg") no-repeat
-
-.next
-  right: 20px
-  background: url("../img/double-angle-pointing-to-right.svg") no-repeat
-  background: url("../img/next.svg") no-repeat
+// .prev
+//   left: 20px
+//   background: url("../img/double-left-chevron.svg") no-repeat
+//   background: url("../img/back.svg") no-repeat
+//
+// .next
+//   right: 20px
+//   background: url("../img/double-angle-pointing-to-right.svg") no-repeat
+//   background: url("../img/next.svg") no-repeat
 
 .prev, .next
   position: absolute
@@ -532,6 +533,55 @@ input[type=number]::-webkit-outer-spin-button
   // outline: 1px solid #ccc
 
 .owl-nav
+  // display: none
+  position: absolute
+  width: 100%
+  top: 50%
+  left: 0
+
+.owl-prev
+  display: block
+  width: 50px
+  display: inline-block
+  height: 50px
+  left: 20px
+  visibility: hidden
+  &::after
+    position: absolute
+    left: 0
+    top: 0
+    content: ''
+    width: 50px
+    visibility: visible
+    height: 50px
+    display: block
+    background: url("../img/back.svg") no-repeat
+    background-size: 50%
+    background-position: center center
+
+.owl-next
+  display: block
+  width: 50px
+  display: inline-block
+  height: 50px
+  right: 20px
+  left: auto
+  visibility: hidden
+  &::after
+    position: absolute
+    // left: 0
+    right: 0
+    top: 0
+    content: ''
+    width: 50px
+    visibility: visible
+    height: 50px
+    display: block
+    background: url("../img/next.svg") no-repeat
+    background-size: 50%
+    background-position: center center
+
+.owl-dots
   display: none
 
 .owl-two
